@@ -1,0 +1,46 @@
+.about-sec{
+    padding-left: 12.2rem;
+    padding-right: 12.2rem;
+    padding-top: 3rem;
+    padding-bottom: 6rem;
+    p{
+        font-size: 14px;
+    }
+    .about-title{
+        font-size: 35px;
+        margin-bottom: 1.5rem;
+    }
+    .description{
+        margin-bottom: 5rem;
+        color: #7b7b93;
+    }
+    .image-about{
+        img{
+            position: relative;
+            border-radius: 10px; 
+            z-index: 1; 
+        }
+        .after-element{
+            position: absolute; 
+            width: 255px; 
+            height: 340px; 
+            background-color: red; 
+            opacity: 15%; 
+            border-radius: 10px; 
+            transform: translate(680px, -300px);
+        }
+    }
+    .about-story-area{
+        margin-top: 8rem;
+        .about-story-area-title{
+            margin-bottom: 2rem;
+        }
+        .about-story-area-text{
+            text-align: justify;
+            p{
+                font-size: 16px;
+            }
+            border-bottom: 1px solid #e5e5e5;
+        }
+    }
+}

@@ -1,0 +1,81 @@
+﻿@model IEnumerable<Core.Entities.Cargo>
+@{
+    ViewData["Title"] = "TR";
+    int count = 1;
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Turkish depo</h4>
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th> # </th>
+                    <th> Track Id </th>
+                    <th> User </th>
+                    <th> Name </th>
+                    <th> Cargo Price </th>
+                    <th> Weight </th>
+                    <th> Delivery Price </th>
+                    <th> Date </th>
+                    <th> Status </th>
+                    <th> Proceedings </th>
+                    <th> Settings </th>
+                </tr>
+                </thead>
+                <tbody>
+                @foreach (var cargo in Model)
+                {
+                    <tr>
+                        <td> @count </td>
+                        <td> @cargo.TrackId </td>
+                        <td> @cargo.ApplicationUser.Name @cargo.ApplicationUser.Surname </td>
+                        <td> @cargo.Name </td>
+                        <td> @cargo.CargoPrice TL</td>
+                        <td> @cargo.Weight </td>
+                        <td> @cargo.DeliveryPrice $</td>
+                        <td> @cargo.TurkeyDate </td>
+                        <td>
+                            @if (@cargo.IsTurkey == true)
+                            {
+                                <span>Xarici ambardadır</span>
+                            }
+                            @if (@cargo.IsWay == true)
+                            {
+                                <span>Yoldadır</span>
+                            } 
+                            @if (@cargo.IsCustoms == true)
+                            {
+                                <span>Gömrükdədir</span>
+                            } 
+                            @if (@cargo.IsAzerbaijan == true)
+                            {
+                                <span>Yerli ambardadır</span>
+                            }
+                        </td>
+                        <td>
+                            @if (@cargo.IsTurkey == true)
+                            {
+                                <a asp-controller="Cargo" asp-action="Sender" asp-route-id="@cargo.Id" class="btn btn-success">Göndər</a>
+                            }
+                            @if (@cargo.IsTurkey ==false)
+                            {
+                                <a disable class="btn btn-success">Göndərilib(@cargo.WayDate)</a>
+                            }
+                        </td>
+                        <td>
+                            <a asp-controller="Cargo" asp-action="Update" asp-route-id="@cargo.Id" class="btn btn-primary">Update</a>
+                            <a asp-controller="Cargo" asp-action="Delete" asp-route-id="@cargo.Id" class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                    count++;
+                }
+                </tbody>
+            </table>
+            <div class="justify-content-center" style="text-align: center">
+                <a asp-controller="Cargo" asp-action="Create" style="margin: 2%" class="btn btn-success">New Cargo</a>
+            </div>
+        </div>
+    </div>
+</div>

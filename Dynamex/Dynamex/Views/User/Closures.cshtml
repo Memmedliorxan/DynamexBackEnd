@@ -1,0 +1,288 @@
+﻿@model Business.ViewModels.UserViewModel 
+@{
+    ViewData["Title"] = "Closures";
+    int count = 1;
+}
+
+<section class="profile-content">
+    <div class="container profile-container">
+
+
+        <div class="row">
+            <div class="col-12 col-md-12 user-balance-block">
+
+
+
+                <div class="float-right text-sm-left text-center">
+                    <div class="user_balance_info" style="justify-content: center">
+                        <div class="info mr-sm-3 mr-0">
+                            <a asp-controller="User" asp-action="TLBalance">
+                                <div class="icon-box ml-auto mr-auto mb-sm-0 mb-2">
+                                    <img src="~/assets/imgs/tl.svg" alt="tl svg icon">
+                                </div>
+                                <div class="balance-text-in ml-sm-2 ml-1">
+                                    <span class="label">Sifariş balansim</span>
+                                    <span class="numb">
+                                        @Model.TL
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none" data-inject-url="/assets/sprite/tl.svg" class="injectable">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75048 19C6.41228 19 6.08358 18.8822 5.82518 18.658C5.50788 18.3882 5.32548 17.993 5.32548 17.575V12.3639L2.05459 13.6723C1.88169 13.7407 1.70119 13.7749 1.52449 13.7749C0.95829 13.7749 0.42439 13.4367 0.20209 12.8781C-0.0905101 12.1466 0.26479 11.3182 0.99629 11.0256L5.32548 9.29393V7.61394L2.05459 8.9223C1.88169 8.9926 1.70119 9.0249 1.52449 9.0249C0.95829 9.0249 0.42439 8.6867 0.20209 8.1281C-0.0905101 7.3985 0.26479 6.5682 0.99629 6.2756L5.32548 4.54393V1.425C5.32548 0.6384 5.96388 0 6.75048 0C7.53708 0 8.17548 0.6384 8.17548 1.425V3.40393L10.4963 2.4756C11.224 2.1849 12.0562 2.5383 12.3488 3.2698C12.6414 3.9994 12.2861 4.8297 11.5546 5.1223L8.17548 6.47394V8.15392L10.4963 7.2256C11.224 6.9349 12.0562 7.2883 12.3488 8.0198C12.6414 8.7494 12.2861 9.5797 11.5546 9.8723L8.17548 11.2239V15.7833C10.4707 15.1316 14.3505 13.5717 14.3505 10.45C14.3505 9.6634 14.9889 9.025 15.7755 9.025C16.5621 9.025 17.2005 9.6634 17.2005 10.45C17.2005 17.29 7.39078 18.9164 6.97278 18.9829C6.89868 18.9943 6.82458 19 6.75048 19Z" fill="#282141"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="info mr-sm-3 mr-0">
+                            <a asp-controller="User" asp-action="DollarBalance">
+                                <div class="icon-box ml-auto mr-auto mb-sm-0 mb-2">
+                                    <img class="cargo" src="~/assets/imgs/cargo-box.svg" alt="#">
+                                </div>
+                                <div class="balance-text-in ml-sm-2 ml-1">
+                                    <span class="label">Daşınma balansım</span>
+                                    <span class="numb">
+                                        @Model.Dollar
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9" fill="none" data-inject-url="/assets/sprite/manat.svg" class="injectable manat">
+                                            <path d="M5.25 3.18393V8.2174C5.25 8.64964 5.58581 9 6 9C6.41419 9 6.75 8.64964 6.75 8.2174V3.19821C9.20161 3.64953 10.5 6.27429 10.5 8.21735C10.5 8.64959 10.8358 8.99995 11.25 8.99995C11.6642 8.99995 12 8.64959 12 8.21735C12 5.17703 9.92292 2.04196 6.75 1.61554V0.782604C6.75 0.350362 6.41419 0 6 0C5.58581 0 5.25 0.350362 5.25 0.782604V1.60683C1.94119 1.97568 0 4.9354 0 8.21735C0 8.64959 0.335812 8.99995 0.75 8.99995C1.16419 8.99995 1.5 8.64959 1.5 8.21735C1.5 6.58855 2.30634 3.61641 5.25 3.18393V3.18393Z" fill="#282141"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 hide-mobile">
+                <div class="widget widget-one mt-3">
+                    <div class="widget-content">
+                        <div class="profile_sidebar_account">
+                            <div class="profile_sidebar_img">
+                                <img src="~/assets/imgs/user_photo_blue.png" class="" alt="user-name">
+                            </div>
+                            <div class="profile-holder__sidebar__account__info">
+                                <h3 class="profile_sidebar_account_i">@Model.Name @Model.Surname</h3>
+                                <div class="profile_sidebar_account_i_id">
+                                    <span class="profile_sidebar_account_i_label m-r-8">
+                                        Müştəri kodu:
+                                    </span>
+                                    <span class="profile_sidebar_account_i_code">@Model.UserName</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="profile-nav">
+                            <li class="menu ">
+                                <a asp-controller="User" asp-action="Index" class="dropdown-toggle">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map">
+                                            <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                                            <line x1="8" y1="2" x2="8" y2="18"></line>
+                                            <line x1="16" y1="6" x2="16" y2="22"></line>
+                                        </svg>
+                                        <span>Türkiyə ünvanım</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu active">
+                                <a asp-controller="User" asp-action="Closures" class="dropdown-toggle">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive">
+                                            <polyline points="21 8 21 21 3 21 3 8"></polyline>
+                                            <rect x="1" y="3" width="22" height="5"></rect>
+                                            <line x1="10" y1="12" x2="14" y2="12"></line>
+                                        </svg>
+                                        <span>Bağlamalar</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu ">
+                                <a asp-controller="User" asp-action="OrderForMe1" class="dropdown-toggle">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard">
+                                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                        </svg>
+                                        <span>Mənim üçün sifariş et</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu ">
+                                <a asp-controller="User" asp-action="Profile" class="dropdown-toggle">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                        </svg>
+                                        <span>Şəxsi məlumatlar</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="menu">
+                                <a asp-controller="Account" asp-action="Logout" class="dropdown-toggle">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                        <span>Çıxış</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-9 col-xl-9 col-sm-12">
+                <div class="profile-content">
+
+
+                    <div class="row layout-top-spacing">
+                        <div class="col-lg-12 col-12 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4>Sifarişlər</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area widget-table-three">
+                                    <div class="table-responsive">
+                                        <table class="table table-scroll mb-4 myTable">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-left th-content">Smart ID / Tracking ID</th>
+                                                    <th class="text-center th-content">Mağaza</th>
+                                                    <th class="text-center th-content">Malın dəyəri</th>
+                                                    <th class="text-center th-content">Çəki (kg)</th>
+                                                    <th class="text-center th-content">Çatdırılma qiyməti</th>
+                                                    <th class="text-center th-content">Status</th>
+                                                    <th class="text-center th-content">Əməliyyat</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach (var c in Model.Cargoes)
+                                                {
+                                                    <tr>
+                                                        <td class="text-center border bold-border-top bold-border-bottom">@c.TrackId</td>
+                                                        <td class="text-center border bold-border-top bold-border-bottom">@c.ShoppingName</td>
+                                                        <td class="text-center border bold-border-top bold-border-bottom">@c.CargoPrice</td>
+                                                        <td class="text-center border bold-border-top bold-border-bottom">@c.Weight</td>
+                                                        <td class="text-center border bold-border-top bold-border-bottom">@c.DeliveryPrice</td>
+                                                        <td class="text-center border bold-border-top bold-border-bottom">
+                                                            @if (@c.IsTurkey == true)
+                                                            {
+                                                                <span style="display: block; font-weight: 900; line-height: 25px">Türkiyə anbarındadır:  </span>
+                                                                <span>@c.TurkeyDate</span>
+                                                            }
+                                                            @if (@c.IsWay == true)
+                                                            {
+                                                                <span style="display: block; font-weight: 900; line-height: 25px">Yoldadır: </span>
+                                                                <span>@c.WayDate</span>
+                                                            }
+                                                            @if (@c.IsCustoms == true)
+                                                            {
+                                                                <span style="display: block; font-weight: 900; line-height: 25px">Gömrükdədir: </span>
+                                                                <span>@c.CustomsDate</span>
+                                                            }
+                                                            @if (@c.IsFilial == true)
+                                                            {
+                                                                <span style="display: block; font-weight: 900; line-height: 25px">Filialdadır: </span>
+                                                                <span>@c.FilialDate</span>
+                                                            }
+                                                            @if (@c.IsDelivery == true)
+                                                            {
+                                                                <span style="display: block; font-weight: 900; line-height: 25px">Təhvil verilib: </span>
+                                                                <span>@c.DeliveryDate</span>
+                                                            }
+                                                        </td>
+                                                        <td class="text-center border bold-border-top bold-border-bottom">
+                                                            @if (@c.IsPay == false)
+                                                            {
+                                                                <a asp-controller="User" asp-action="DollarPay" asp-route-id="@c.Id" class="btn btn-primary">Ödə</a>
+                                                            }
+                                                            @if (@c.IsPay == true)
+                                                            {
+                                                                <span>Ödənilib</span>
+                                                            }
+                                                        </td>
+                                                    </tr>
+                                                }
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="orderModalLong" tabindex="-1" role="dialog" aria-labelledby="orderModalLongTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="orderModalLongTitle">Sifariş haqqında</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">×</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="container--tabs">
+                                        <li class="tab tabs--active">
+                                            <a>
+                                                Bağlama məlumatları
+                                            </a>
+                                        </li>
+                                        <li class="tab">
+                                            <a>
+                                                Məhsullar
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <div class="container--content">
+                                        <div class="content tabContent shipmentContent content--active">
+                                            <div class="shipmentInfoBlock">
+                                                <div class="tracking-bar">
+                                                    <div class="tracking-bar-progress-outbound" style="width: 0%;"></div>
+                                                    <div class="tracking-bar-items">
+                                                        <div class="tracking-bar-item-outbound ">
+                                                            <div class="tracking-bar-content">
+                                                                <span>Sifarişiniz alınıb</span>
+
+                                                            </div>
+                                                        </div>
+                                                        <div class="tracking-bar-item-outbound ">
+                                                            <div class="tracking-bar-content"><span>Xarici anbara çatıb</span></div>
+                                                        </div>
+                                                        <div class="tracking-bar-item-outbound ">
+                                                            <div class="tracking-bar-content"><span>Göndərilib</span></div>
+                                                        </div>
+                                                        <div class="tracking-bar-item-outbound ">
+                                                            <div class="tracking-bar-content"><span>Gömrük yoxlanışındadır</span></div>
+                                                        </div>
+                                                        <div class="tracking-bar-item-outbound ">
+                                                            <div class="tracking-bar-content"><span>Bakı anbarına çatıb</span></div>
+                                                        </div>
+                                                        <div class="tracking-bar-item-outbound ">
+                                                            <div class="tracking-bar-content"><span>Təhvil verilib</span></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="content tabContent tabProducts">
+                                            <p>Bölmə hazırlanır...</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Bağla</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

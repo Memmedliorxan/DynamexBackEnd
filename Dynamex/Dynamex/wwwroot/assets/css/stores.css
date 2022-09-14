@@ -1,0 +1,64 @@
+#stores {
+  padding: 3rem 7rem;
+}
+#stores .stores-title {
+  margin-bottom: 1rem;
+}
+#stores .stores-title b {
+  font-size: 35px;
+}
+#stores .stores-description {
+  margin-bottom: 3rem;
+}
+#stores .stores-description p {
+  font-size: 14px;
+  color: #7b7b93;
+}
+#stores .location {
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 3rem;
+  border-bottom: 1px solid #f8f8f8;
+}
+#stores .location a {
+  padding: 7px 20px;
+  font-size: 17px;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+}
+#stores .location a:hover {
+  background-color: #fef5e9;
+  border-radius: 5px;
+  color: #fd475d;
+}
+#stores .location a:focus {
+  background-color: #fd475d;
+  border-radius: 5px;
+  color: white;
+}
+#stores .location .active {
+  background-color: #fd475d;
+  border-radius: 5px;
+  color: white;
+}
+#stores .store-wrapper {
+  gap: 1rem;
+}
+#stores .store-wrapper .store {
+  margin-bottom: 2rem;
+}
+#stores .store-wrapper .store a {
+  display: flex;
+  justify-content: center;
+  padding: 2.3rem 2rem;
+  border: 1px solid #eeeeee;
+  border-radius: 10px;
+  transition: 0.2s ease-in-out;
+}
+#stores .store-wrapper .store a:hover {
+  border: 1px solid #cecee2;
+  scale: 105%;
+}
+#stores .store-wrapper .store img {
+  width: 100%;
+}

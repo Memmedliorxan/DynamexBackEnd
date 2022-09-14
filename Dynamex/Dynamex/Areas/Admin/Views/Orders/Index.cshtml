@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Core.Entities.Order>
+@{
+    ViewData["Title"] = "Index";
+    int count = 1;
+}
+
+<div class="col-lg-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Orders</h4>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th> # </th>
+                        <th> User FIN</th>
+                        <th> User </th>
+                        <th> Link </th>
+                        <th> Count </th>
+                        <th> Price </th>
+                        <th> Color </th>
+                        <th> Size </th>
+                        <th> About </th>
+                        <th> Date </th>
+                        <th> Proceedings </th>
+                        @*<th> Settings </th>*@
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var cargo in Model.Where(c => c.IsOrder == false))
+                    {
+                        <tr>
+                            <td> @count </td>
+                            <td> @cargo.ApplicationUser.PassportFIN </td>
+                            <td> @cargo.ApplicationUser.Name @cargo.ApplicationUser.Surname </td>
+                            <td> <a target="_blank" href="@cargo.Link">Link</a> </td>
+                            <td> @cargo.Count </td>
+                            <td> @cargo.Price TL</td>
+                            <td> @cargo.Color </td>
+                            <td> @cargo.Size </td>
+                            <td> @cargo.Detall </td>
+                            <td> @cargo.Date </td>
+                            <td>
+                                @if (@cargo.IsOrder == false)
+                                {
+                                    <a asp-controller="Orders" asp-action="GetOrdered" asp-route-id="@cargo.Id" class="btn btn-success">Sifariş verilib</a>
+                                }
+                            </td>
+                        </tr>
+                        count++;
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

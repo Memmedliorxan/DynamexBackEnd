@@ -1,0 +1,99 @@
+﻿@model Core.Entities.Addresses
+@{
+    ViewData["Title"] = "Index";
+}
+<div class="col-lg-12 col-12 layout-spacing" style="padding: 5%">
+    <div class="statbox widget box box-shadow">
+        <div class="widget-header">
+            <div class="row">
+                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                    <h4>America Address</h4>
+                </div>
+            </div>
+        </div>
+        <div class="widget-content widget-content-area">
+            <div class="clipboard">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="input-nameCountry">Country</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="input-nameCountry" value="United States" readonly="">
+                            <div class="input-group-append">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="input-addressTitle">Address Line 1</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="input-addressTitle" value="@Model.AddressFirstLineUSA" readonly="">
+                            <div class="input-group-append">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label for="input-city">Address Line 2</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="input-city" value="@Model.AddressSecondLineUSA" readonly="">
+                            <div class="input-group-append">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label for="input-ilche">State</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="input-ilche" value="@Model.StateUSA" readonly="">
+                            <div class="input-group-append">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 form-group">
+                        <label for="input-Semt">City</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="input-Semt" value="@Model.CityUSA" readonly="">
+                            <div class="input-group-append">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-12 form-group">
+                        <label for="input-addressTurkey">Country District</label>
+                        <div class="input-group">
+                            <textarea type="text" class="form-control" id="input-addressTurkey" style="resize: none;height: 35px;line-height: 30px;" readonly="">@Model.CountryDistrictUSA</textarea>
+                            <div class="input-group-append">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 form-group">
+                        <label for="input-mobilePhone">Phone Number</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="input-mobilePhone" value="@Model.PhoneNumberUSA" readonly="">
+                            <div class="input-group-append">
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 form-group">
+                        <label for="input-zip">ZIP/Post Code</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" id="input-zip" value="@Model.PostalCodeUSA" readonly="">
+                            <div class="input-group-append">
+
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <a class="btn btn-success" asp-controller="Adresses" asp-action="UpdateUsa" asp-route-id="1">Update</a>
+        </div>
+    </div>
+</div>

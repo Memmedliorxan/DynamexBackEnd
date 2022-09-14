@@ -1,0 +1,93 @@
+@media only screen and (max-width: 1438px) {
+    #news{
+        .card{
+            min-width: 31%;
+        }
+    }
+}
+@media only screen and (max-width: 991px) {
+    #news{
+        .card{
+            min-width: 47%;
+        }
+    }
+}
+@media only screen and (min-width: 992px) {
+    #news{
+        .card{
+            &:hover{
+                transform: translateY(-.3rem);
+            }
+        }
+    }
+}
+@media only screen and (max-width: 767px) {
+    #news{
+        overflow-x: hidden;
+        padding: 0rem;
+        .card{
+            min-width: 47%;
+        }
+        .pagination-wrap{
+            scale: 90%;
+            margin-bottom: 2rem;
+        }
+        .sort-wrap{
+            padding: 0 3rem;
+            margin-bottom: 6rem;
+            .main{
+                cursor: pointer;
+                font-size: 15px;
+                border-radius: 5px; 
+                position: relative;
+                min-width: 125.25px;
+                max-width: 125.25px;
+                border: 1px solid #e6e6e6; 
+                padding: .7rem 2rem .7rem 1.5rem;
+                text-align: center;
+            }
+            .chev{
+                right: .5rem;
+                cursor: pointer;
+                position: absolute;
+                transition: .1s ease-in-out;
+                transform: translate(-53px, 11px);
+            }
+            .chev-active{
+                transform: translate(-53px, 14px) rotate(-180deg);
+            }
+            .options{
+                display: none !important;
+                position: absolute;
+                border: 1px solid #e6e6e6;
+                border-radius: 5px;
+                width: 125.25px;
+                padding: .5rem;
+                transform: translate(0px, 53px);
+                background-color: #fdfaf6;
+                a{
+                    font-size: 16px;
+                    &:hover{
+                        color: #fd475d;
+                    }
+                }
+            }
+            .show-options{
+                display: flex !important;
+                flex-direction: column;
+                align-items: center;
+            }
+            .op-selected{
+                display: none;
+            }
+            .noselect {
+                -webkit-touch-callout: none;
+                  -webkit-user-select: none;
+                   -khtml-user-select: none;
+                     -moz-user-select: none;
+                      -ms-user-select: none;
+                          user-select: none;
+            }
+        }
+    }
+}

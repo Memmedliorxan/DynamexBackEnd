@@ -1,0 +1,30 @@
+@media only screen and (max-width: 1399px) {
+    .about-sec{
+        .image-about{
+            img{
+                width: 770px;
+                height: 376px;
+            }
+            .after-element{
+                width: 225px; 
+                height: 292px;
+                transform: translate(644px, -260px);
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1199px) {
+    .about-sec{
+        .image-about{
+            img{
+                width: 720px;
+                height: 351px;
+            }
+            .after-element{
+                width: 238px; 
+                height: 310px;
+                transform: translate(590px, -281px);
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+#privacy-policy{
+    padding: 3rem 18rem;
+    text-align: justify;
+    text-justify: inter-word;
+    .privacy-policy-title{
+        margin-bottom: 3rem;
+        b{
+            font-size: 35px;
+        }
+    }
+    .privacy-policy-content{
+        font-size: 15px;
+        p{
+            margin-bottom: .2rem;
+        }
+        .intro{
+            margin-bottom: 2rem;
+            p{
+                a{
+                    color: #fd475d;
+                    font-size: 15px;
+                }
+            }
+        }
+        .common{
+            margin-bottom: 2rem;
+        }
+    }
+}

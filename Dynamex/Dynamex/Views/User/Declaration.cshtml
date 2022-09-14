@@ -1,0 +1,991 @@
+﻿@model Business.ViewModels.UserViewModel
+@{
+    ViewData["Title"] = "Declaration";
+}
+
+<!--<main class="main full" role="main">
+    <section class="dashboard_section full">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 dash_mobile_hide">
+                    <div class="dashboard_left_menu full">-->
+                        <!-- user img-->
+                        <!--<div class="dashboard_left_user full">
+                            <div class="dlu_img">
+                                <img src="//images/no-photo.jpg" alt="">
+                            </div>
+                            <div class="user_name">
+                                <p>asif orucov</p>
+                                <span>ID: D465401</span>
+                            </div>
+                        </div>
+                        <a asp-controller="User" asp-action="Declaration" class="declaration">
+                            <span></span>Bəyan et
+                        </a>
+                        <a href="/account/referral?lang=az" class="declaration referral-btn">
+                            <i class="fas fa-user-plus" aria-hidden="true"></i>Dostunu dəvət et
+                        </a>
+                        <div class="dashboard_left_navbar full">
+                            <ul class="full">
+                                <li>
+                                    <a asp-controller="User" asp-action="Index">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 14 14"><path id="prefix__map-outline" d="M16.611 3l-.124.023-4.153 1.61L7.667 3 3.28 4.478a.392.392 0 0 0-.28.373v11.76a.389.389 0 0 0 .389.389l.124-.023 4.153-1.61L12.333 17l4.387-1.478a.392.392 0 0 0 .28-.373V3.389A.389.389 0 0 0 16.611 3M8.444 4.921l3.112 1.089v9.069L8.444 13.99V4.921m-3.889.77l2.333-.786v9.1l-2.333.9V5.691m10.889 8.618l-2.333.786V6l2.333-.9z" transform="translate(-3 -3)" style="fill:#7b7b93"></path></svg>Xaricdəki ünvanlarım
+                                    </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="User" asp-action="Closures">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.7" height="14.707" viewBox="0 0 14.7 14.707"><g id="bağlamalar" transform="translate(-431.252 -431.645)"><path id="Path_1592" data-name="Path 1592" d="M14,3.827a.207.207,0,0,0-.1-.17L9.569.911A.205.205,0,0,0,9.5.884L5.11,0a.206.206,0,0,0-.15.374L6.924,1.623l-1.582.469L4,1.244a.205.205,0,0,0-.222,0L2.156,2.309a.205.205,0,0,0,.225.343l1.514-.991L7.851,4.166,4.541,6.333.585,3.828,2.5,2.578a.205.205,0,0,0-.225-.343L.094,3.659A.208.208,0,0,0,0,3.831V11.05a.205.205,0,0,0,.1.173l4.337,2.746a.209.209,0,0,0,.168.023l7.517-2.231A.205.205,0,0,0,12,11.368L4.748,13.521V6.73l8.843-2.624V10.9l-2.02.6a.205.205,0,0,0,.117.393l2.167-.648a.205.205,0,0,0,.147-.2V3.831s0,0,0,0ZM9.382,1.278l3.371,2.134L9.484,2.758,6.113.624ZM8.34,3.99,5.8,2.384l1.582-.469L9.3,3.125a.205.205,0,0,0,.069.028l3.579.716L5.826,5.982,8.342,4.335a.205.205,0,0,0,0-.345ZM.411,4.2,4.338,6.69v6.733L.411,10.937Z" transform="translate(431.601 432)" fill="#7b7b93" stroke="#7b7b93" stroke-width="0.7"></path><path id="Path_1594" data-name="Path 1594" d="M0,0,6-2V-.436l-6,2Z" transform="translate(438 442)"></path></g></svg>Bağlamalar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="User" asp-action="OrderForMe1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 14 14"><path id="prefix__gesture-tap-button" d="M9.7 4.1a2.8 2.8 0 0 1 2.8 2.8 2.769 2.769 0 0 1-1.4 2.422v-.854a2.1 2.1 0 1 0-2.8 0v.854A2.769 2.769 0 0 1 6.9 6.9a2.8 2.8 0 0 1 2.8-2.8m4.9 10.85A1.086 1.086 0 0 1 13.55 16H9.7a.948.948 0 0 1-.7-.3l-2.8-2.94.518-.539A.7.7 0 0 1 7.25 12h.14L9 13.2V6.9a.7.7 0 0 1 1.4 0v3.129l.847.091 2.758 1.533a1.026 1.026 0 0 1 .6.945v2.352M14.6 2H3.4A1.4 1.4 0 0 0 2 3.4V9a1.4 1.4 0 0 0 1.4 1.4h2.8V9H3.4V3.4h11.2V9h-1.4v1.4h1.4v-.028l.028.028A1.389 1.389 0 0 0 16 9V3.4A1.4 1.4 0 0 0 14.6 2z" transform="translate(-2 -2)" style="fill:#7b7b93"></path></svg>Mənim üçün sifariş et
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/account/debt?lang=az" class="notify-color">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="9.333" viewBox="0 0 14 9.333"><path id="prefix__cash" d="M3 6h14v9.333H3V6m7 2.333a2.333 2.333 0 1 1-2.333 2.333A2.333 2.333 0 0 1 10 8.333m-3.889-.777a1.556 1.556 0 0 1-1.555 1.555v3.111a1.556 1.556 0 0 1 1.556 1.556h7.778a1.556 1.556 0 0 1 1.556-1.556V9.111a1.556 1.556 0 0 1-1.556-1.556z" transform="translate(-3 -6)" style="fill:#7b7b93"></path></svg>Borclar
+                                    </a>
+                                </li>
+                                <li>
+                                    <a asp-controller="User" asp-action="TLBalance">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="9.333" viewBox="0 0 14 9.333"><path id="prefix__cash" d="M3 6h14v9.333H3V6m7 2.333a2.333 2.333 0 1 1-2.333 2.333A2.333 2.333 0 0 1 10 8.333m-3.889-.777a1.556 1.556 0 0 1-1.555 1.555v3.111a1.556 1.556 0 0 1 1.556 1.556h7.778a1.556 1.556 0 0 1 1.556-1.556V9.111a1.556 1.556 0 0 1-1.556-1.556z" transform="translate(-3 -6)" style="fill:#7b7b93"></path></svg>Balans
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/account/branch?lang=az" class="notify-color">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 14 14"><path id="prefix__map-outline" d="M16.611 3l-.124.023-4.153 1.61L7.667 3 3.28 4.478a.392.392 0 0 0-.28.373v11.76a.389.389 0 0 0 .389.389l.124-.023 4.153-1.61L12.333 17l4.387-1.478a.392.392 0 0 0 .28-.373V3.389A.389.389 0 0 0 16.611 3M8.444 4.921l3.112 1.089v9.069L8.444 13.99V4.921m-3.889.77l2.333-.786v9.1l-2.333.9V5.691m10.889 8.618l-2.333.786V6l2.333-.9z" transform="translate(-3 -3)" style="fill:#7b7b93"></path></svg>Çatdırılma növü
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/account/sub-account?lang=az">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10.182" viewBox="0 0 14 10.182"><path id="prefix__account-multiple-outline" d="M6.091 4a2.545 2.545 0 1 1-2.546 2.545A2.545 2.545 0 0 1 6.091 4m0 1.273a1.273 1.273 0 1 0 1.273 1.272 1.273 1.273 0 0 0-1.273-1.272m0 4.455c1.7 0 5.091.853 5.091 2.545v1.909H1v-1.909c0-1.693 3.392-2.546 5.091-2.546m0 1.209c-1.89 0-3.882.929-3.882 1.336v.7h7.764v-.7c0-.407-1.992-1.336-3.882-1.336M9.909 4a2.545 2.545 0 1 1 0 5.091 2.463 2.463 0 0 1-.846-.146 3.823 3.823 0 0 0 0-4.8A2.463 2.463 0 0 1 9.909 4M15 12.273v1.909h-2.545v-2.227a2.7 2.7 0 0 0-1.292-2.113c1.724.28 3.837 1.094 3.837 2.431z" transform="translate(-1 -4)" style="fill:#7b7b93"></path></svg>Ailə hesabı
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/account/attorney?lang=az">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 14 14"><path id="prefix__text-box-multiple-outline" d="M10.545 9.909H6.091V8.636h4.455v1.273m1.909-2.545H6.091V6.091h6.364v1.273m0-2.545H6.091V3.545h6.364v1.273M2.273 3.545v10.182h10.182V15H2.273A1.273 1.273 0 0 1 1 13.727V3.545h1.273M13.727 1A1.273 1.273 0 0 1 15 2.273v8.909a1.268 1.268 0 0 1-1.273 1.273H4.818a1.273 1.273 0 0 1-1.273-1.273V2.273A1.268 1.268 0 0 1 4.818 1h8.909M4.818 2.273v8.909h8.909V2.273z" transform="translate(-1 -1)" style="fill:#7b7b93"></path></svg>Etibarnamələr
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/account/tickets?lang=az">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path id="prefix__help-circle-outline" d="M10.1 16.4h1.8v-1.8h-1.8v1.8M11 2a9 9 0 1 0 9 9 9 9 0 0 0-9-9m0 16.2a7.2 7.2 0 1 1 7.2-7.2 7.21 7.21 0 0 1-7.2 7.2m0-12.6a3.6 3.6 0 0 0-3.6 3.6h1.8a1.8 1.8 0 0 1 3.6 0c0 1.8-2.7 1.575-2.7 4.5h1.8c0-2.025 2.7-2.25 2.7-4.5A3.6 3.6 0 0 0 11 5.6z" transform="translate(-2 -2)" style="fill:#7b7b93"></path></svg>Müraciətlər
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/account/courier?lang=az">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12.867" viewBox="0 0 14 12.867"><g id="kuryer" transform="translate(2512 -6254.016)"><g id="Group_996" data-name="Group 996" transform="translate(-2972.418 5592.698)"><path id="package-variant-closed" d="M9.418,7.17a.353.353,0,0,1-.189.314L6.412,9.067a.354.354,0,0,1-.406,0L3.189,7.484A.353.353,0,0,1,3,7.17V3.961a.353.353,0,0,1,.189-.314L6.006,2.064a.354.354,0,0,1,.406,0L9.229,3.647a.353.353,0,0,1,.189.314V7.17m-3.209-4.4-.674.382,2.1,1.209.7-.4L6.209,2.767M4.084,3.961,6.209,5.156l.7-.392-2.1-1.212-.727.41m-.371,3L5.853,8.165V5.773l-2.139-1.2V6.96m4.992,0V4.571l-2.139,1.2V8.165Z" transform="translate(465 659.318)" fill="#7b7b93"></path></g><path id="account-details-outline" d="M8.3,7.5A2.1,2.1,0,1,1,6.2,5.4,2.1,2.1,0,0,1,8.3,7.5m2.1,7.7H2V13.8C2,12.253,3.883,11,6.2,11s4.2,1.253,4.2,2.8M5.5,7.5a.7.7,0,1,0,.7-.7.7.7,0,0,0-.7.7M3.4,13.8H9c0-.77-1.253-1.4-2.8-1.4s-2.8.63-2.8,1.4" transform="translate(-2514 6251.683)" fill="#7b7b93"></path></g></svg>Kuryer sifarişi
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/account/post-order?lang=az">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.7" height="14.707" viewBox="0 0 14.7 14.707"><g id="bağlamalar" transform="translate(-431.252 -431.645)"><path id="Path_1592" data-name="Path 1592" d="M14,3.827a.207.207,0,0,0-.1-.17L9.569.911A.205.205,0,0,0,9.5.884L5.11,0a.206.206,0,0,0-.15.374L6.924,1.623l-1.582.469L4,1.244a.205.205,0,0,0-.222,0L2.156,2.309a.205.205,0,0,0,.225.343l1.514-.991L7.851,4.166,4.541,6.333.585,3.828,2.5,2.578a.205.205,0,0,0-.225-.343L.094,3.659A.208.208,0,0,0,0,3.831V11.05a.205.205,0,0,0,.1.173l4.337,2.746a.209.209,0,0,0,.168.023l7.517-2.231A.205.205,0,0,0,12,11.368L4.748,13.521V6.73l8.843-2.624V10.9l-2.02.6a.205.205,0,0,0,.117.393l2.167-.648a.205.205,0,0,0,.147-.2V3.831s0,0,0,0ZM9.382,1.278l3.371,2.134L9.484,2.758,6.113.624ZM8.34,3.99,5.8,2.384l1.582-.469L9.3,3.125a.205.205,0,0,0,.069.028l3.579.716L5.826,5.982,8.342,4.335a.205.205,0,0,0,0-.345ZM.411,4.2,4.338,6.69v6.733L.411,10.937Z" transform="translate(431.601 432)" fill="#7b7b93" stroke="#7b7b93" stroke-width="0.7"></path><path id="Path_1594" data-name="Path 1594" d="M0,0,6-2V-.436l-6,2Z" transform="translate(438 442)"></path></g></svg>Azərpoçt sifarişi
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/account/return-requests?lang=az">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14.7" height="14.707" viewBox="0 0 14.7 14.707"><g id="bağlamalar" transform="translate(-431.252 -431.645)"><path id="Path_1592" data-name="Path 1592" d="M14,3.827a.207.207,0,0,0-.1-.17L9.569.911A.205.205,0,0,0,9.5.884L5.11,0a.206.206,0,0,0-.15.374L6.924,1.623l-1.582.469L4,1.244a.205.205,0,0,0-.222,0L2.156,2.309a.205.205,0,0,0,.225.343l1.514-.991L7.851,4.166,4.541,6.333.585,3.828,2.5,2.578a.205.205,0,0,0-.225-.343L.094,3.659A.208.208,0,0,0,0,3.831V11.05a.205.205,0,0,0,.1.173l4.337,2.746a.209.209,0,0,0,.168.023l7.517-2.231A.205.205,0,0,0,12,11.368L4.748,13.521V6.73l8.843-2.624V10.9l-2.02.6a.205.205,0,0,0,.117.393l2.167-.648a.205.205,0,0,0,.147-.2V3.831s0,0,0,0ZM9.382,1.278l3.371,2.134L9.484,2.758,6.113.624ZM8.34,3.99,5.8,2.384l1.582-.469L9.3,3.125a.205.205,0,0,0,.069.028l3.579.716L5.826,5.982,8.342,4.335a.205.205,0,0,0,0-.345ZM.411,4.2,4.338,6.69v6.733L.411,10.937Z" transform="translate(431.601 432)" fill="#7b7b93" stroke="#7b7b93" stroke-width="0.7"></path><path id="Path_1594" data-name="Path 1594" d="M0,0,6-2V-.436l-6,2Z" transform="translate(438 442)"></path></g></svg>İadələr
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/account/setting?lang=az">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="13.618" height="18" viewBox="0 0 13.618 14"><path id="prefix__settings-outline" d="M14.282 9.679l1.477 1.162a.353.353 0 0 1 .084.448l-1.4 2.422a.352.352 0 0 1-.427.154l-1.743-.707a5.1 5.1 0 0 1-1.183.693l-.259 1.855a.354.354 0 0 1-.35.294h-2.8a.354.354 0 0 1-.35-.294l-.259-1.855a4.862 4.862 0 0 1-1.183-.693l-1.743.707a.352.352 0 0 1-.427-.154l-1.4-2.422a.345.345 0 0 1 .084-.448L3.88 9.679 3.831 9l.049-.7L2.4 7.159a.345.345 0 0 1-.084-.448l1.4-2.422a.344.344 0 0 1 .427-.154l1.743.7a5.074 5.074 0 0 1 1.183-.686l.259-1.855A.354.354 0 0 1 7.681 2h2.8a.354.354 0 0 1 .35.294l.259 1.855a5.074 5.074 0 0 1 1.183.686l1.743-.7a.344.344 0 0 1 .427.154l1.4 2.422a.353.353 0 0 1-.084.448L14.282 8.3l.049.7-.049.679M5.231 9a3.99 3.99 0 0 0 .175 1.162l-1.449 1.19.525.91 1.764-.662a3.837 3.837 0 0 0 2 1.155l.303 1.845H9.6l.308-1.841a3.847 3.847 0 0 0 2.009-1.148l1.757.658.525-.91-1.449-1.19A3.817 3.817 0 0 0 12.931 9a3.943 3.943 0 0 0-.175-1.155L14.2 6.662l-.525-.91-1.75.651a3.868 3.868 0 0 0-2.011-1.162L9.606 3.4h-1.05l-.308 1.841A3.868 3.868 0 0 0 6.239 6.4l-1.75-.658-.525.91 1.442 1.19A3.943 3.943 0 0 0 5.231 9m3.85-2.45A2.45 2.45 0 1 1 6.631 9a2.45 2.45 0 0 1 2.45-2.45m0 1.4A1.05 1.05 0 1 0 10.131 9a1.05 1.05 0 0 0-1.05-1.05z" transform="translate(-2.271 -2)" style="fill:#7b7b93"></path></svg>Tənzimləmələr
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/account/logout?lang=az">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12.6" height="18" viewBox="0 0 12.6 14"><path id="prefix__logout" d="M12.1 12.5v-2.1H7.2V7.6h4.9V5.5L15.6 9l-3.5 3.5M10.7 2a1.4 1.4 0 0 1 1.4 1.4v1.4h-1.4V3.4H4.4v11.2h6.3v-1.4h1.4v1.4a1.4 1.4 0 0 1-1.4 1.4H4.4A1.4 1.4 0 0 1 3 14.6V3.4A1.4 1.4 0 0 1 4.4 2z" transform="translate(-3 -2)" style="fill:#7b7b93"></path></svg>Çıxış
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>-->
+                        <!-- dashboard left menu end-->
+                    <!--</div>
+                </div>
+
+                <div class="col-12 mobile-show">
+                    <div class="clearfix">
+
+                        <div class="account-top-info mobile-show clearfix">
+                            <div class="float-left">
+                                <p>asif orucov</p>
+                            </div>
+                            <div class="float-right">
+                                <p>D465401</p>
+                            </div>
+                        </div>
+
+                        <div class="dahsboard_right_top full">
+
+                            <div class="row">
+                                <div class="col-md-4 col-4">
+                                    <a asp-controller="User" asp-action="TLBalance" class="full">
+                                        <div class="drt_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12.444" height="16" viewBox="0 0 12.444 16">
+                                                <path id="prefix__currency-try" d="M17.444 11a8 8 0 0 1-8 8H7.667v-7.316L5 12.662v-1.893l2.667-.978V8.218L5 9.187V7.3l2.667-.978V3h1.777v2.667l4.444-1.6v1.884L9.444 7.569v1.582l4.444-1.618v1.894l-4.444 1.617v6.178A6.222 6.222 0 0 0 15.667 11z" transform="translate(-5 -3)" style="fill:#fff"></path>
+                                            </svg>
+
+                                        </div>
+                                        <div class="drt_right">
+                                            <p>Sifariş balansım</p>
+                                            <span>0.00 TL</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 col-4">
+                                    <a asp-controller="User" asp-action="DollarBalance" class="full">
+                                        <div class="drt_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.8" viewBox="0 0 16 12.8">
+                                                <path id="prefix__cash-usd-outline" d="M16.4 15.2H3.6V5.6h12.8m0-1.6H3.6A1.594 1.594 0 0 0 2 5.6v9.6a1.6 1.6 0 0 0 1.6 1.6h12.8a1.6 1.6 0 0 0 1.6-1.6V5.6A1.6 1.6 0 0 0 16.4 4M9.2 14.4h1.6v-.8h.8a.8.8 0 0 0 .8-.8v-2.4a.8.8 0 0 0-.8-.8H9.2v-.8h3.2V7.2h-1.6v-.8H9.2v.8h-.8a.8.8 0 0 0-.8.8v2.4a.8.8 0 0 0 .8.8h2.4v.8H7.6v1.6h1.6z" transform="translate(-2 -4)" style="fill:#fff"></path>
+                                            </svg>
+                                        </div>
+                                        <div class="drt_right">
+                                            <p>Daşınma balansım</p>
+                                            <span>0.00 $</span>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4 col-4">
+                                    <a href="/account/parcel-list?lang=az" class="full">
+                                        <div class="drt_icon">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.4" height="16" viewBox="0 0 14.4 16">
+                                                <path id="prefix__package-variant-closed" d="M17.4 13.6a.793.793 0 0 1-.424.7l-6.32 3.552a.794.794 0 0 1-.912 0L3.424 14.3A.793.793 0 0 1 3 13.6V6.4a.793.793 0 0 1 .424-.7l6.32-3.552a.794.794 0 0 1 .912 0l6.32 3.552a.793.793 0 0 1 .424.7v7.2m-7.2-9.88l-1.512.856L13.4 7.288l1.568-.888L10.2 3.72M5.432 6.4L10.2 9.08l1.568-.88-4.7-2.72-1.636.92M4.6 13.128l4.8 2.7v-5.364l-4.8-2.7v5.36m11.2 0V7.768l-4.8 2.7v5.368z" transform="translate(-3 -2)" style="fill:#fff"></path>
+                                            </svg>
+
+                                        </div>
+                                        <div class="drt_right">
+                                            <p>Bağlamalar</p>
+                                            <span>0</span>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/account/add-declaration?lang=az" class="mobile_declaration">
+                        <span></span> Bəyannamə əlavə et
+                    </a>
+                    <a href="/account/referral?lang=az" class="declaration referral-btn">
+                        <i class="fas fa-user-plus" aria-hidden="true"></i>Dostunu dəvət et
+                    </a>
+                    <div class="col-md-12 order_me_drop dashboard_mobile_navbar_dropdown">
+                        <div class="order_me_dropdown dashboard_mobile_navbar">
+                            <div class="active_count">
+                                <a href="javascript:void(0)">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 14 14"><path id="prefix__map-outline" d="M16.611 3l-.124.023-4.153 1.61L7.667 3 3.28 4.478a.392.392 0 0 0-.28.373v11.76a.389.389 0 0 0 .389.389l.124-.023 4.153-1.61L12.333 17l4.387-1.478a.392.392 0 0 0 .28-.373V3.389A.389.389 0 0 0 16.611 3M8.444 4.921l3.112 1.089v9.069L8.444 13.99V4.921m-3.889.77l2.333-.786v9.1l-2.333.9V5.691m10.889 8.618l-2.333.786V6l2.333-.9z" transform="translate(-3 -3)" style="fill:#7b7b93"></path></svg>Xaricdəki ünvanlarım
+                                </a>
+                            </div>
+                            <div class="order_me_countries_list">
+                                <ul>
+                                    <li>
+                                        <a href="/account/index?lang=az">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 14 14"><path id="prefix__map-outline" d="M16.611 3l-.124.023-4.153 1.61L7.667 3 3.28 4.478a.392.392 0 0 0-.28.373v11.76a.389.389 0 0 0 .389.389l.124-.023 4.153-1.61L12.333 17l4.387-1.478a.392.392 0 0 0 .28-.373V3.389A.389.389 0 0 0 16.611 3M8.444 4.921l3.112 1.089v9.069L8.444 13.99V4.921m-3.889.77l2.333-.786v9.1l-2.333.9V5.691m10.889 8.618l-2.333.786V6l2.333-.9z" transform="translate(-3 -3)" style="fill:#7b7b93"></path></svg>Xaricdəki ünvanlarım
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/parcel-list?lang=az">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.7" height="14.707" viewBox="0 0 14.7 14.707"><g id="bağlamalar" transform="translate(-431.252 -431.645)"><path id="Path_1592" data-name="Path 1592" d="M14,3.827a.207.207,0,0,0-.1-.17L9.569.911A.205.205,0,0,0,9.5.884L5.11,0a.206.206,0,0,0-.15.374L6.924,1.623l-1.582.469L4,1.244a.205.205,0,0,0-.222,0L2.156,2.309a.205.205,0,0,0,.225.343l1.514-.991L7.851,4.166,4.541,6.333.585,3.828,2.5,2.578a.205.205,0,0,0-.225-.343L.094,3.659A.208.208,0,0,0,0,3.831V11.05a.205.205,0,0,0,.1.173l4.337,2.746a.209.209,0,0,0,.168.023l7.517-2.231A.205.205,0,0,0,12,11.368L4.748,13.521V6.73l8.843-2.624V10.9l-2.02.6a.205.205,0,0,0,.117.393l2.167-.648a.205.205,0,0,0,.147-.2V3.831s0,0,0,0ZM9.382,1.278l3.371,2.134L9.484,2.758,6.113.624ZM8.34,3.99,5.8,2.384l1.582-.469L9.3,3.125a.205.205,0,0,0,.069.028l3.579.716L5.826,5.982,8.342,4.335a.205.205,0,0,0,0-.345ZM.411,4.2,4.338,6.69v6.733L.411,10.937Z" transform="translate(431.601 432)" fill="#7b7b93" stroke="#7b7b93" stroke-width="0.7"></path><path id="Path_1594" data-name="Path 1594" d="M0,0,6-2V-.436l-6,2Z" transform="translate(438 442)"></path></g></svg>Bağlamalar
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/order-list?lang=az">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 14 14"><path id="prefix__gesture-tap-button" d="M9.7 4.1a2.8 2.8 0 0 1 2.8 2.8 2.769 2.769 0 0 1-1.4 2.422v-.854a2.1 2.1 0 1 0-2.8 0v.854A2.769 2.769 0 0 1 6.9 6.9a2.8 2.8 0 0 1 2.8-2.8m4.9 10.85A1.086 1.086 0 0 1 13.55 16H9.7a.948.948 0 0 1-.7-.3l-2.8-2.94.518-.539A.7.7 0 0 1 7.25 12h.14L9 13.2V6.9a.7.7 0 0 1 1.4 0v3.129l.847.091 2.758 1.533a1.026 1.026 0 0 1 .6.945v2.352M14.6 2H3.4A1.4 1.4 0 0 0 2 3.4V9a1.4 1.4 0 0 0 1.4 1.4h2.8V9H3.4V3.4h11.2V9h-1.4v1.4h1.4v-.028l.028.028A1.389 1.389 0 0 0 16 9V3.4A1.4 1.4 0 0 0 14.6 2z" transform="translate(-2 -2)" style="fill:#7b7b93"></path></svg>Mənim üçün sifariş et
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/debt?lang=az">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="9.333" viewBox="0 0 14 9.333"><path id="prefix__cash" d="M3 6h14v9.333H3V6m7 2.333a2.333 2.333 0 1 1-2.333 2.333A2.333 2.333 0 0 1 10 8.333m-3.889-.777a1.556 1.556 0 0 1-1.555 1.555v3.111a1.556 1.556 0 0 1 1.556 1.556h7.778a1.556 1.556 0 0 1 1.556-1.556V9.111a1.556 1.556 0 0 1-1.556-1.556z" transform="translate(-3 -6)" style="fill:#7b7b93"></path></svg>Borclar
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/balance?lang=az">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="9.333" viewBox="0 0 14 9.333"><path id="prefix__cash" d="M3 6h14v9.333H3V6m7 2.333a2.333 2.333 0 1 1-2.333 2.333A2.333 2.333 0 0 1 10 8.333m-3.889-.777a1.556 1.556 0 0 1-1.555 1.555v3.111a1.556 1.556 0 0 1 1.556 1.556h7.778a1.556 1.556 0 0 1 1.556-1.556V9.111a1.556 1.556 0 0 1-1.556-1.556z" transform="translate(-3 -6)" style="fill:#7b7b93"></path></svg>Balans
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/branch?lang=az">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 14 14"><path id="prefix__map-outline" d="M16.611 3l-.124.023-4.153 1.61L7.667 3 3.28 4.478a.392.392 0 0 0-.28.373v11.76a.389.389 0 0 0 .389.389l.124-.023 4.153-1.61L12.333 17l4.387-1.478a.392.392 0 0 0 .28-.373V3.389A.389.389 0 0 0 16.611 3M8.444 4.921l3.112 1.089v9.069L8.444 13.99V4.921m-3.889.77l2.333-.786v9.1l-2.333.9V5.691m10.889 8.618l-2.333.786V6l2.333-.9z" transform="translate(-3 -3)" style="fill:#7b7b93"></path></svg>Çatdırılma növü
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/sub-account?lang=az">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="10.182" viewBox="0 0 14 10.182"><path id="prefix__account-multiple-outline" d="M6.091 4a2.545 2.545 0 1 1-2.546 2.545A2.545 2.545 0 0 1 6.091 4m0 1.273a1.273 1.273 0 1 0 1.273 1.272 1.273 1.273 0 0 0-1.273-1.272m0 4.455c1.7 0 5.091.853 5.091 2.545v1.909H1v-1.909c0-1.693 3.392-2.546 5.091-2.546m0 1.209c-1.89 0-3.882.929-3.882 1.336v.7h7.764v-.7c0-.407-1.992-1.336-3.882-1.336M9.909 4a2.545 2.545 0 1 1 0 5.091 2.463 2.463 0 0 1-.846-.146 3.823 3.823 0 0 0 0-4.8A2.463 2.463 0 0 1 9.909 4M15 12.273v1.909h-2.545v-2.227a2.7 2.7 0 0 0-1.292-2.113c1.724.28 3.837 1.094 3.837 2.431z" transform="translate(-1 -4)" style="fill:#7b7b93"></path></svg>Ailə hesabı
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/attorney?lang=az">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 14 14"><path id="prefix__text-box-multiple-outline" d="M10.545 9.909H6.091V8.636h4.455v1.273m1.909-2.545H6.091V6.091h6.364v1.273m0-2.545H6.091V3.545h6.364v1.273M2.273 3.545v10.182h10.182V15H2.273A1.273 1.273 0 0 1 1 13.727V3.545h1.273M13.727 1A1.273 1.273 0 0 1 15 2.273v8.909a1.268 1.268 0 0 1-1.273 1.273H4.818a1.273 1.273 0 0 1-1.273-1.273V2.273A1.268 1.268 0 0 1 4.818 1h8.909M4.818 2.273v8.909h8.909V2.273z" transform="translate(-1 -1)" style="fill:#7b7b93"></path></svg>Etibarnamələr
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/tickets?lang=az">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18"><path id="prefix__help-circle-outline" d="M10.1 16.4h1.8v-1.8h-1.8v1.8M11 2a9 9 0 1 0 9 9 9 9 0 0 0-9-9m0 16.2a7.2 7.2 0 1 1 7.2-7.2 7.21 7.21 0 0 1-7.2 7.2m0-12.6a3.6 3.6 0 0 0-3.6 3.6h1.8a1.8 1.8 0 0 1 3.6 0c0 1.8-2.7 1.575-2.7 4.5h1.8c0-2.025 2.7-2.25 2.7-4.5A3.6 3.6 0 0 0 11 5.6z" transform="translate(-2 -2)" style="fill:#7b7b93"></path></svg>Müraciətlər
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/courier?lang=az">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="12.867" viewBox="0 0 14 12.867"><g id="kuryer" transform="translate(2512 -6254.016)"><g id="Group_996" data-name="Group 996" transform="translate(-2972.418 5592.698)"><path id="package-variant-closed" d="M9.418,7.17a.353.353,0,0,1-.189.314L6.412,9.067a.354.354,0,0,1-.406,0L3.189,7.484A.353.353,0,0,1,3,7.17V3.961a.353.353,0,0,1,.189-.314L6.006,2.064a.354.354,0,0,1,.406,0L9.229,3.647a.353.353,0,0,1,.189.314V7.17m-3.209-4.4-.674.382,2.1,1.209.7-.4L6.209,2.767M4.084,3.961,6.209,5.156l.7-.392-2.1-1.212-.727.41m-.371,3L5.853,8.165V5.773l-2.139-1.2V6.96m4.992,0V4.571l-2.139,1.2V8.165Z" transform="translate(465 659.318)" fill="#7b7b93"></path></g><path id="account-details-outline" d="M8.3,7.5A2.1,2.1,0,1,1,6.2,5.4,2.1,2.1,0,0,1,8.3,7.5m2.1,7.7H2V13.8C2,12.253,3.883,11,6.2,11s4.2,1.253,4.2,2.8M5.5,7.5a.7.7,0,1,0,.7-.7.7.7,0,0,0-.7.7M3.4,13.8H9c0-.77-1.253-1.4-2.8-1.4s-2.8.63-2.8,1.4" transform="translate(-2514 6251.683)" fill="#7b7b93"></path></g></svg>Kuryer sifarişi
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/post-order?lang=az">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.7" height="14.707" viewBox="0 0 14.7 14.707"><g id="bağlamalar" transform="translate(-431.252 -431.645)"><path id="Path_1592" data-name="Path 1592" d="M14,3.827a.207.207,0,0,0-.1-.17L9.569.911A.205.205,0,0,0,9.5.884L5.11,0a.206.206,0,0,0-.15.374L6.924,1.623l-1.582.469L4,1.244a.205.205,0,0,0-.222,0L2.156,2.309a.205.205,0,0,0,.225.343l1.514-.991L7.851,4.166,4.541,6.333.585,3.828,2.5,2.578a.205.205,0,0,0-.225-.343L.094,3.659A.208.208,0,0,0,0,3.831V11.05a.205.205,0,0,0,.1.173l4.337,2.746a.209.209,0,0,0,.168.023l7.517-2.231A.205.205,0,0,0,12,11.368L4.748,13.521V6.73l8.843-2.624V10.9l-2.02.6a.205.205,0,0,0,.117.393l2.167-.648a.205.205,0,0,0,.147-.2V3.831s0,0,0,0ZM9.382,1.278l3.371,2.134L9.484,2.758,6.113.624ZM8.34,3.99,5.8,2.384l1.582-.469L9.3,3.125a.205.205,0,0,0,.069.028l3.579.716L5.826,5.982,8.342,4.335a.205.205,0,0,0,0-.345ZM.411,4.2,4.338,6.69v6.733L.411,10.937Z" transform="translate(431.601 432)" fill="#7b7b93" stroke="#7b7b93" stroke-width="0.7"></path><path id="Path_1594" data-name="Path 1594" d="M0,0,6-2V-.436l-6,2Z" transform="translate(438 442)"></path></g></svg>Azərpoçt sifarişi
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/return-requests?lang=az">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="14.7" height="14.707" viewBox="0 0 14.7 14.707"><g id="bağlamalar" transform="translate(-431.252 -431.645)"><path id="Path_1592" data-name="Path 1592" d="M14,3.827a.207.207,0,0,0-.1-.17L9.569.911A.205.205,0,0,0,9.5.884L5.11,0a.206.206,0,0,0-.15.374L6.924,1.623l-1.582.469L4,1.244a.205.205,0,0,0-.222,0L2.156,2.309a.205.205,0,0,0,.225.343l1.514-.991L7.851,4.166,4.541,6.333.585,3.828,2.5,2.578a.205.205,0,0,0-.225-.343L.094,3.659A.208.208,0,0,0,0,3.831V11.05a.205.205,0,0,0,.1.173l4.337,2.746a.209.209,0,0,0,.168.023l7.517-2.231A.205.205,0,0,0,12,11.368L4.748,13.521V6.73l8.843-2.624V10.9l-2.02.6a.205.205,0,0,0,.117.393l2.167-.648a.205.205,0,0,0,.147-.2V3.831s0,0,0,0ZM9.382,1.278l3.371,2.134L9.484,2.758,6.113.624ZM8.34,3.99,5.8,2.384l1.582-.469L9.3,3.125a.205.205,0,0,0,.069.028l3.579.716L5.826,5.982,8.342,4.335a.205.205,0,0,0,0-.345ZM.411,4.2,4.338,6.69v6.733L.411,10.937Z" transform="translate(431.601 432)" fill="#7b7b93" stroke="#7b7b93" stroke-width="0.7"></path><path id="Path_1594" data-name="Path 1594" d="M0,0,6-2V-.436l-6,2Z" transform="translate(438 442)"></path></g></svg>İadələr
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/setting?lang=az">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="13.618" height="18" viewBox="0 0 13.618 14"><path id="prefix__settings-outline" d="M14.282 9.679l1.477 1.162a.353.353 0 0 1 .084.448l-1.4 2.422a.352.352 0 0 1-.427.154l-1.743-.707a5.1 5.1 0 0 1-1.183.693l-.259 1.855a.354.354 0 0 1-.35.294h-2.8a.354.354 0 0 1-.35-.294l-.259-1.855a4.862 4.862 0 0 1-1.183-.693l-1.743.707a.352.352 0 0 1-.427-.154l-1.4-2.422a.345.345 0 0 1 .084-.448L3.88 9.679 3.831 9l.049-.7L2.4 7.159a.345.345 0 0 1-.084-.448l1.4-2.422a.344.344 0 0 1 .427-.154l1.743.7a5.074 5.074 0 0 1 1.183-.686l.259-1.855A.354.354 0 0 1 7.681 2h2.8a.354.354 0 0 1 .35.294l.259 1.855a5.074 5.074 0 0 1 1.183.686l1.743-.7a.344.344 0 0 1 .427.154l1.4 2.422a.353.353 0 0 1-.084.448L14.282 8.3l.049.7-.049.679M5.231 9a3.99 3.99 0 0 0 .175 1.162l-1.449 1.19.525.91 1.764-.662a3.837 3.837 0 0 0 2 1.155l.303 1.845H9.6l.308-1.841a3.847 3.847 0 0 0 2.009-1.148l1.757.658.525-.91-1.449-1.19A3.817 3.817 0 0 0 12.931 9a3.943 3.943 0 0 0-.175-1.155L14.2 6.662l-.525-.91-1.75.651a3.868 3.868 0 0 0-2.011-1.162L9.606 3.4h-1.05l-.308 1.841A3.868 3.868 0 0 0 6.239 6.4l-1.75-.658-.525.91 1.442 1.19A3.943 3.943 0 0 0 5.231 9m3.85-2.45A2.45 2.45 0 1 1 6.631 9a2.45 2.45 0 0 1 2.45-2.45m0 1.4A1.05 1.05 0 1 0 10.131 9a1.05 1.05 0 0 0-1.05-1.05z" transform="translate(-2.271 -2)" style="fill:#7b7b93"></path></svg>Tənzimləmələr
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/account/logout?lang=az">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="12.6" height="18" viewBox="0 0 12.6 14"><path id="prefix__logout" d="M12.1 12.5v-2.1H7.2V7.6h4.9V5.5L15.6 9l-3.5 3.5M10.7 2a1.4 1.4 0 0 1 1.4 1.4v1.4h-1.4V3.4H4.4v11.2h6.3v-1.4h1.4v1.4a1.4 1.4 0 0 1-1.4 1.4H4.4A1.4 1.4 0 0 1 3 14.6V3.4A1.4 1.4 0 0 1 4.4 2z" transform="translate(-3 -2)" style="fill:#7b7b93"></path></svg>Çıxış
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-9 col-md-12">
+                    <div class="dashboard_right_box full">
+                        <div class="mobile-hide d-none">
+
+                            <div class="account-top-info mobile-show clearfix">
+                                <div class="float-left">
+                                    <p>asif orucov</p>
+                                </div>
+                                <div class="float-right">
+                                    <p>D465401</p>
+                                </div>
+                            </div>
+
+                            <div class="dahsboard_right_top full">
+
+                                <div class="row">
+                                    <div class="col-md-4 col-4">
+                                        <a href="/az/account/balance/order" class="full">
+                                            <div class="drt_icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="12.444" height="16" viewBox="0 0 12.444 16">
+                                                    <path id="prefix__currency-try" d="M17.444 11a8 8 0 0 1-8 8H7.667v-7.316L5 12.662v-1.893l2.667-.978V8.218L5 9.187V7.3l2.667-.978V3h1.777v2.667l4.444-1.6v1.884L9.444 7.569v1.582l4.444-1.618v1.894l-4.444 1.617v6.178A6.222 6.222 0 0 0 15.667 11z" transform="translate(-5 -3)" style="fill:#fff"></path>
+                                                </svg>
+
+                                            </div>
+                                            <div class="drt_right">
+                                                <p>Sifariş balansım</p>
+                                                <span>0.00 TL</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-4">
+                                        <a href="/az/account/balance/shipping" class="full">
+                                            <div class="drt_icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.8" viewBox="0 0 16 12.8">
+                                                    <path id="prefix__cash-usd-outline" d="M16.4 15.2H3.6V5.6h12.8m0-1.6H3.6A1.594 1.594 0 0 0 2 5.6v9.6a1.6 1.6 0 0 0 1.6 1.6h12.8a1.6 1.6 0 0 0 1.6-1.6V5.6A1.6 1.6 0 0 0 16.4 4M9.2 14.4h1.6v-.8h.8a.8.8 0 0 0 .8-.8v-2.4a.8.8 0 0 0-.8-.8H9.2v-.8h3.2V7.2h-1.6v-.8H9.2v.8h-.8a.8.8 0 0 0-.8.8v2.4a.8.8 0 0 0 .8.8h2.4v.8H7.6v1.6h1.6z" transform="translate(-2 -4)" style="fill:#fff"></path>
+                                                </svg>
+                                            </div>
+                                            <div class="drt_right">
+                                                <p>Daşınma balansım</p>
+                                                <span>0.00 $</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-4">
+                                        <a href="/account/parcel-list?lang=az" class="full">
+                                            <div class="drt_icon">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14.4" height="16" viewBox="0 0 14.4 16">
+                                                    <path id="prefix__package-variant-closed" d="M17.4 13.6a.793.793 0 0 1-.424.7l-6.32 3.552a.794.794 0 0 1-.912 0L3.424 14.3A.793.793 0 0 1 3 13.6V6.4a.793.793 0 0 1 .424-.7l6.32-3.552a.794.794 0 0 1 .912 0l6.32 3.552a.793.793 0 0 1 .424.7v7.2m-7.2-9.88l-1.512.856L13.4 7.288l1.568-.888L10.2 3.72M5.432 6.4L10.2 9.08l1.568-.88-4.7-2.72-1.636.92M4.6 13.128l4.8 2.7v-5.364l-4.8-2.7v5.36m11.2 0V7.768l-4.8 2.7v5.368z" transform="translate(-3 -2)" style="fill:#fff"></path>
+                                                </svg>
+
+                                            </div>
+                                            <div class="drt_right">
+                                                <p>Bağlamalar</p>
+                                                <span>0</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard_right_title clearfix dash_mobile_hide full">
+                            <div class="float-left">-->
+                                <!-- <img src="/css/images/declaration-main.svg" /> -->
+<!--<h2>Bəyan et</h2>
+</div>
+<a href="#video_popup" data-effect="mfp-zoom-in" class="popup_btn float-right video-tuts">
+    <img src="/css/images/monitor.svg">
+    <h2>Video təlimat</h2>
+</a>
+</div>
+<div class="dashboard_right_container adress_box full">
+<form id="declaration-form" class="form" action="/account/add-declaration?lang=az" method="post">
+<input type="hidden" name="_csrf-frontend" value="Lt8BpKaWCV_w9GVy5iQ3KHeZX4XCowAt7_8LBoFSD5tPlErK_uFzM7-cIUCwclhuPNAO57DLWl2fzXFssDB9qA==">
+<div class="form-group field-parcel-country_id required">
+    <label class="control-label" for="parcel-country_id">Ölkə</label>
+    <div class="dropdown bootstrap-select">
+        <select id="parcel-country_id" class="selectpicker" name="Parcel[country_id]" title="Ölkə seçin" aria-required="true" tabindex="-98">
+            <option class="bs-title-option" value=""></option>
+            <option value="2">Türkiyə</option>
+            <option value="1">ABŞ</option>
+        </select><button type="button" class="btn dropdown-toggle btn-light bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-1" aria-haspopup="listbox" aria-expanded="false" data-id="parcel-country_id" title="Ölkə seçin"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Ölkə seçin</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-1" tabindex="-1"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div>
+    </div>
+
+    <p class="help-block help-block-error"></p>
+</div>                                <div class="row  declaration_top">
+    <div class="col-md-6">
+        <div class="form-group field-parcel-tracking_id required">
+            <label class="control-label" for="parcel-tracking_id">Tracking ID</label>
+            <input type="text" id="parcel-tracking_id" class="form-control" name="Parcel[tracking_id]" autocomplete="off" aria-required="true">
+
+            <p class="help-block help-block-error"></p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group full_select field-parcel-store_name required">
+            <label class="control-label" for="parcel-store_name">Mağazanın adı</label>
+            <select id="parcel-store_name" class="chosen-select select2-hidden-accessible" name="Parcel[store_name]" data-tags="1" data-search="1" aria-required="true" data-select2-id="select2-data-parcel-store_name" tabindex="-1" aria-hidden="true">
+                <option value="" data-select2-id="select2-data-2-bq24">Mağaza seçin</option>
+                <option value="Addax">Addax</option>
+                <option value="Adidas">Adidas</option>
+                <option value="ADL">ADL</option>
+                <option value="Akakçe">Akakçe</option>
+                <option value="Aldo">Aldo</option>
+                <option value="Amazon">Amazon</option>
+                <option value="Arzum">Arzum</option>
+                <option value="Askı">Askı</option>
+                <option value="aski nisantası">aski nisantası</option>
+                <option value="Avon">Avon</option>
+                <option value="avva">avva</option>
+                <option value="Ayakkabı City">Ayakkabı City</option>
+                <option value="Ayakkabı Dünyası">Ayakkabı Dünyası</option>
+                <option value="Babexi">Babexi</option>
+                <option value="Bade Butik">Bade Butik</option>
+                <option value="Bambi">Bambi</option>
+                <option value="Bambum">Bambum</option>
+                <option value="BanadaBul">BanadaBul</option>
+                <option value="Bebe">Bebe</option>
+                <option value="Bebek House">Bebek House</option>
+                <option value="Bershka">Bershka</option>
+                <option value="Beymen">Beymen</option>
+                <option value="Bigparfum">Bigparfum</option>
+                <option value="BJK">BJK</option>
+                <option value="Boyner">Boyner</option>
+                <option value="Brandroom">Brandroom</option>
+                <option value="Bunlardanistiyorum">Bunlardanistiyorum</option>
+                <option value="Cacharel">Cacharel</option>
+                <option value="Çamaşırım ">Çamaşırım </option>
+                <option value="Carter's">Carter's</option>
+                <option value="Centone">Centone</option>
+                <option value="Çeyizsarayı">Çeyizsarayı</option>
+                <option value="Childrensplace">Childrensplace</option>
+                <option value="Cimri">Cimri</option>
+                <option value="Civilim">Civilim</option>
+                <option value="Colins">Colins</option>
+                <option value="collezione">collezione</option>
+                <option value="Cookplus">Cookplus</option>
+                <option value="D&amp;R">D&amp;R</option>
+                <option value="Decathlon">Decathlon</option>
+                <option value="Defacto">Defacto</option>
+                <option value="Deichmann">Deichmann</option>
+                <option value="Delisiyim">Delisiyim</option>
+                <option value="Deppo">Deppo</option>
+                <option value="Derimod">Derimod</option>
+                <option value="Dilvin">Dilvin</option>
+                <option value="Dockers">Dockers</option>
+                <option value="DSDamat">DSDamat</option>
+                <option value="E-Bebek">E-Bebek</option>
+                <option value="ecenin butigi">ecenin butigi</option>
+                <option value="Elart">Elart</option>
+                <option value="ELLE">ELLE</option>
+                <option value="English Home">English Home</option>
+                <option value="Evidea">Evidea</option>
+                <option value="Eyyo">Eyyo</option>
+                <option value="Farfetch">Farfetch</option>
+                <option value="Fark Kozmetik">Fark Kozmetik</option>
+                <option value="Fenerium">Fenerium</option>
+                <option value="Flo">Flo</option>
+                <option value="Flormar">Flormar</option>
+                <option value="GAP">GAP</option>
+                <option value="GittiGidiyor">GittiGidiyor</option>
+                <option value="Gratis">Gratis</option>
+                <option value="Greyder">Greyder</option>
+                <option value="GS Store">GS Store</option>
+                <option value="H&amp;M">H&amp;M</option>
+                <option value="Hatemoğlu">Hatemoğlu</option>
+                <option value="Havos">Havos</option>
+                <option value="Hazelanna">Hazelanna</option>
+                <option value="Hepsiburada ">Hepsiburada </option>
+                <option value="Hirdavatalet">Hirdavatalet</option>
+                <option value="Homecept">Homecept</option>
+                <option value="hoticshoes">hoticshoes</option>
+                <option value="Hugoboss">Hugoboss</option>
+                <option value="Hummel">Hummel</option>
+                <option value="Idefix">Idefix</option>
+                <option value="Ifondi">Ifondi</option>
+                <option value="IKEA">IKEA</option>
+                <option value="Imza">Imza</option>
+                <option value="Ipekyol">Ipekyol</option>
+                <option value="Jimmy Key">Jimmy Key</option>
+                <option value="Karaca">Karaca</option>
+                <option value="Karpefingo">Karpefingo</option>
+                <option value="Karspor">Karspor</option>
+                <option value="Kemal Tanca">Kemal Tanca</option>
+                <option value="Kiğılı">Kiğılı</option>
+                <option value="Kinetix">Kinetix</option>
+                <option value="KİP">KİP</option>
+                <option value="Kırmızı Kedi">Kırmızı Kedi</option>
+                <option value="Kırmızıonline">Kırmızıonline</option>
+                <option value="KitabYurdu">KitabYurdu</option>
+                <option value="Kitapsepeti">Kitapsepeti</option>
+                <option value="Korayspor">Korayspor</option>
+                <option value="Koton">Koton</option>
+                <option value="Kozbino">Kozbino</option>
+                <option value="Kryolan">Kryolan</option>
+                <option value="Lacoste">Lacoste</option>
+                <option value="Lc Waikiki ">Lc Waikiki </option>
+                <option value="Lescon">Lescon</option>
+                <option value="Letoon">Letoon</option>
+                <option value="levis">levis</option>
+                <option value="Lidyana">Lidyana</option>
+                <option value="Linens">Linens</option>
+                <option value="LTB">LTB</option>
+                <option value="maccosmetics">maccosmetics</option>
+                <option value="Machka">Machka</option>
+                <option value="Madamcoco">Madamcoco</option>
+                <option value="Madmext">Madmext</option>
+                <option value="Mango">Mango</option>
+                <option value="Markastok">Markastok</option>
+                <option value="Massimodutti">Massimodutti</option>
+                <option value="Mavi">Mavi</option>
+                <option value="Maymoda">Maymoda</option>
+                <option value="Mediamarkt">Mediamarkt</option>
+                <option value="Miss Tesettür">Miss Tesettür</option>
+                <option value="Moda celikler">Moda celikler</option>
+                <option value="Modamız Bir">Modamız Bir</option>
+                <option value="Modanisa">Modanisa</option>
+                <option value="Morhipo">Morhipo</option>
+                <option value="mupa shoes">mupa shoes</option>
+                <option value="Mutfakevim">Mutfakevim</option>
+                <option value="Mydukkan">Mydukkan</option>
+                <option value="n11">n11</option>
+                <option value="Network">Network</option>
+                <option value="Nevresim Dünyası">Nevresim Dünyası</option>
+                <option value="New Balance ">New Balance </option>
+                <option value="Nine West">Nine West</option>
+                <option value="Oksit">Oksit</option>
+                <option value="Orijinall">Orijinall</option>
+                <option value="Outlet Azpara">Outlet Azpara</option>
+                <option value="Oysho">Oysho</option>
+                <option value="Ozge ozgenc">Ozge ozgenc</option>
+                <option value="Pandora">Pandora</option>
+                <option value="Patırtı">Patırtı</option>
+                <option value="Pelinin ayaqqabiları">Pelinin ayaqqabiları</option>
+                <option value="Penti">Penti</option>
+                <option value="Phaksesuar">Phaksesuar</option>
+                <option value="Pierre Cardin">Pierre Cardin</option>
+                <option value="Pull and Bear">Pull and Bear</option>
+                <option value="Puma">Puma</option>
+                <option value="Ramsey">Ramsey</option>
+                <option value="Reebok">Reebok</option>
+                <option value="Robin">Robin</option>
+                <option value="Saat&amp;Saat">Saat&amp;Saat</option>
+                <option value="Sarar">Sarar</option>
+                <option value="Sateen">Sateen</option>
+                <option value="Scooter">Scooter</option>
+                <option value="Sefamerve">Sefamerve</option>
+                <option value="Sephora">Sephora</option>
+                <option value="shophudabeauty">shophudabeauty</option>
+                <option value="Shopigo">Shopigo</option>
+                <option value="Skechers">Skechers</option>
+                <option value="Sofra Takimlari">Sofra Takimlari</option>
+                <option value="Sportive">Sportive</option>
+                <option value="Stradivarius">Stradivarius</option>
+                <option value="Superstep">Superstep</option>
+                <option value="suvari">suvari</option>
+                <option value="Tac">Tac</option>
+                <option value="Teknosa">Teknosa</option>
+                <option value="Tommy Life">Tommy Life</option>
+                <option value="Toyzzshop">Toyzzshop</option>
+                <option value="Trendbende">Trendbende</option>
+                <option value="Trendyol.com.tr">Trendyol.com.tr</option>
+                <option value="Tuba Butik">Tuba Butik</option>
+                <option value="Tudors">Tudors</option>
+                <option value="Tüzün">Tüzün</option>
+                <option value="Twist">Twist</option>
+                <option value="US Polo">US Polo</option>
+                <option value="Vans">Vans</option>
+                <option value="Vatan">Vatan</option>
+                <option value="Vedi">Vedi</option>
+                <option value="Watson's">Watson's</option>
+                <option value="Xint">Xint</option>
+                <option value="Yargıcı">Yargıcı</option>
+                <option value="Yoox">Yoox</option>
+                <option value="Zafoni">Zafoni</option>
+                <option value="Zara">Zara</option>
+            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-1-t0qz" style="width: 107px;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-parcel-store_name-container"><span class="select2-selection__rendered" id="select2-parcel-store_name-container" role="textbox" aria-readonly="true" title="Mağaza seçin">Mağaza seçin</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+
+            <p class="help-block help-block-error"></p>
+        </div>
+    </div>
+</div>
+
+<div class="row  declaration_top">
+    <div class="col-md-6">
+        <div class="form-group field-parcel-category_id required">
+            <label class="control-label" for="parcel-category_id">Kateqoriya</label>
+            <input type="hidden" name="Parcel[category_id]" value=""><div class="dropdown bootstrap-select show-tick">
+                <select id="parcel-category_id" class="selectpicker" name="Parcel[category_id][]" multiple="" size="4" title="Kateqoriya seçin" aria-required="true" tabindex="-98">
+                    <option value="41">Telefon aksesuarı</option>
+                    <option value="42">avtomobil aksesuarı</option>
+                    <option value="43">Çorab</option>
+                    <option value="44">bebek ürünleri</option>
+                    <option value="45">iç geyim</option>
+                    <option value="46">mətbəx əşyası</option>
+                    <option value="47">gigiyenik mehsul</option>
+                    <option value="48">bijuteriya</option>
+                    <option value="49">masa örtüyü</option>
+                    <option value="50">pərdə</option>
+                    <option value="51">musiqi alətləri</option>
+                    <option value="52">şəxsi istifadə üçün məhsullar</option>
+                    <option value="53">saç düzləşdirici fırça</option>
+                    <option value="54">qida əlavəsi</option>
+                    <option value="55">pul qabı</option>
+                    <option value="56">kamera aksesuarı</option>
+                    <option value="57">kəmər</option>
+                    <option value="58">aksesuar</option>
+                    <option value="59">Dekor əşyaları</option>
+                    <option value="60">eynək</option>
+                    <option value="61">hamam əşyaları</option>
+                    <option value="62">heyvan aksasuarları</option>
+                    <option value="63">TERMOMETR</option>
+                    <option value="64">təmizlik ləvazimatları</option>
+                    <option value="36">Alətlər</option>
+                    <option value="8">Avtomobil  ehtiyyat hissələri</option>
+                    <option value="28">Ayaqqabı</option>
+                    <option value="7">Kitablar</option>
+                    <option value="19">Çanta</option>
+                    <option value="9">Kosmetik məhsullar</option>
+                    <option value="34">Çay, Qəhvə, Şirniyyat</option>
+                    <option value="17">Oyun CD</option>
+                    <option value="11">Geyim</option>
+                    <option value="12">Geyim Aksesuarları</option>
+                    <option value="13">Kompüter aksesuarları</option>
+                    <option value="14">Rəqəmsal kameralar</option>
+                    <option value="31">Dəftərxana ləvazimatı</option>
+                    <option value="24">Dərman məhsulları</option>
+                    <option value="15">Elektronika</option>
+                    <option value="21">Ev Telefonları</option>
+                    <option value="40">Ev əşyaları</option>
+                    <option value="16">Oyun aksesuarları</option>
+                    <option value="18">Oyun konsolu</option>
+                    <option value="32">Günəş eynəkləri</option>
+                    <option value="20">Qulaqcıq</option>
+                    <option value="22">Məişət Texnikası</option>
+                    <option value="30">İdman malları</option>
+                    <option value="23">Noutbuklar</option>
+                    <option value="10">Makiyaj kosmetikası və aksessuarlar</option>
+                    <option value="37">Oyuncaqlar</option>
+                    <option value="25">Telefon qabları</option>
+                    <option value="33">Planşet</option>
+                    <option value="27">Playstation</option>
+                    <option value="39">Saatlar</option>
+                    <option value="35">Teleskoplar / Mikroskoplar</option>
+                    <option value="38">Televizor</option>
+                </select><button type="button" class="btn dropdown-toggle btn-light bs-placeholder" data-toggle="dropdown" role="combobox" aria-owns="bs-select-2" aria-haspopup="listbox" aria-expanded="false" data-id="parcel-category_id" title="Kateqoriya seçin"><div class="filter-option"><div class="filter-option-inner"><div class="filter-option-inner-inner">Kateqoriya seçin</div></div> </div></button><div class="dropdown-menu "><div class="inner show" role="listbox" id="bs-select-2" tabindex="-1" aria-multiselectable="true"><ul class="dropdown-menu inner show" role="presentation"></ul></div></div>
+            </div>
+
+            <p class="help-block help-block-error"></p>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group field-parcel-invoice_price required">
+            <label class="control-label" for="parcel-invoice_price">İnvoys qiyməti</label>
+            <input type="text" id="parcel-invoice_price" class="form-control" name="Parcel[invoice_price]" aria-required="true">
+
+            <p class="help-block help-block-error"></p>
+        </div>
+    </div>
+</div>
+
+<div class="b_another_services d-none">
+    <div class="b_another_service_text">
+        <h3>Digər xidmətlərimiz</h3>
+        <ul>
+            <div class="form-group field-parcel-service_id">
+
+                <input type="hidden" name="Parcel[service_id]" value=""><div id="parcel-service_id">
+                    <li><input id="user-Parcel[service_id][]0" type="checkbox" name="Parcel[service_id][]" value="1"><label for="user-Parcel[service_id][]0"><p>Foto xidməti - <span class="declaration-service-price">1.00 $ (1.70 ₼)</span> </p></label></li>
+                    <li><input id="user-Parcel[service_id][]1" type="checkbox" name="Parcel[service_id][]" value="3"><label for="user-Parcel[service_id][]1"><p>Foto xidməti - <span class="declaration-service-price">1.00 $ (1.70 ₼)</span> </p></label></li>
+                    <li><input id="user-Parcel[service_id][]2" type="checkbox" name="Parcel[service_id][]" value="4"><label for="user-Parcel[service_id][]2"><p>Bağlama tərkibin yoxlanması - <span class="declaration-service-price">0.50 $ (0.85 ₼)</span> </p></label></li>
+                    <li><input id="user-Parcel[service_id][]3" type="checkbox" name="Parcel[service_id][]" value="6"><label for="user-Parcel[service_id][]3"><p>Bağlamanın fiziki zədələnməsini yoxlamaq - <span class="declaration-service-price">2.00 $ (3.40 ₼)</span> </p></label></li>
+                </div>
+
+                <p class="help-block help-block-error"></p>
+            </div>                                        </ul>
+    </div>
+</div>
+<div class="invoys_upload">
+    <div class="b_another_service_text">
+        <h3>İnvoys yüklə</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div id="fine-uploader-gallery">
+                <div class="qq-uploader-selector qq-uploader qq-gallery drag-drop account-form-file" qq-drop-area-text="">
+                    <div class="invoys_upload_box invoys_upload_box_c">
+                        <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone="" style="display: none;">
+
+                        </div>
+
+                        <div class="before-upload-content">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18.118" height="22" viewBox="0 0 18.118 22">
+                                <path id="prefix__upload" d="M10.176 19.824v-7.765H5L14.059 3l9.059 9.059h-5.177v7.765h-7.765M5 25v-2.588h18.118V25z" transform="translate(-5 -3)" style="fill:#94949f"></path>
+                            </svg>
+                            <p>Sürükləyib bura atın</p>
+                            <p class="or">və ya</p>
+                        </div>
+
+                        <div class="in_error_note d-none">
+                            <p class="error_file_note">Yüklədiyiniz faylın formatı düzgün deyil</p>
+                        </div>
+
+                        <ul class="qq-upload-list-selector qq-upload-list img-list" role="region" aria-live="polite" aria-relevant="additions removals"></ul>
+
+                        <div class="qq-upload-button-selector choose_file" style="position: relative; overflow: hidden; direction: ltr;">Faylı seçin<input qq-button-id="5367c8f2-26c7-40f3-8dd6-8243851e9ddd" title="file input" multiple="" type="file" name="qqfile" style="position: absolute; right: 0px; top: 0px; font-family: Arial; font-size: 118px; margin: 0px; padding: 0px; cursor: pointer; opacity: 0; height: 100%;"></div>
+                        <span class="qq-drop-processing-selector qq-drop-processing qq-hide">
+                            <span>Processing dropped files...</span>
+                            <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
+                        </span>
+                    </div>
+                    <p class="upload_note full">Qəbul edilən fayllar: .pdf, .jpg, .png</p>
+                    <dialog class="qq-alert-dialog-selector">
+                        <div class="qq-dialog-message-selector"></div>
+                        <div class="qq-dialog-buttons">
+                            <button type="button" class="qq-cancel-button-selector">Bağla</button>
+                        </div>
+                    </dialog>
+
+                    <dialog class="qq-confirm-dialog-selector">
+                        <div class="qq-dialog-message-selector"></div>
+                        <div class="qq-dialog-buttons">
+                            <button type="button" class="qq-cancel-button-selector">No</button>
+                            <button type="button" class="qq-ok-button-selector">Yes</button>
+                        </div>
+                    </dialog>
+
+                    <dialog class="qq-prompt-dialog-selector">
+                        <div class="qq-dialog-message-selector"></div>
+                        <input type="text">
+                        <div class="qq-dialog-buttons">
+                            <button type="button" class="qq-cancel-button-selector">Cancel</button>
+                            <button type="button" class="qq-ok-button-selector">Ok</button>
+                        </div>
+                    </dialog>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 invoys_upload_text">
+            <div class="form-group field-parcel-comment">
+
+                <textarea id="parcel-comment" class="form-control" name="Parcel[comment]" placeholder="Qeydiniz varsa daxil edin"></textarea>
+
+                <p class="help-block help-block-error"></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="b_save">
+    <button type="submit">Yadda saxla</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>-->
+
+<section class="profile-content">
+    <div class="container profile-container">
+
+
+        <div class="row">
+            <div class="col-12 col-md-12 user-balance-block">
+
+
+
+                <div class="float-right text-sm-left text-center">
+                    <div class="user_balance_info" style="justify-content: center">
+                        <div class="info mr-sm-3 mr-0">
+                            <a asp-controller="User" asp-action="TLBalance">
+                                <div class="icon-box ml-auto mr-auto mb-sm-0 mb-2">
+                                    <img src="~/assets/imgs/tl.svg" alt="tl svg icon">
+                                </div>
+                                <div class="balance-text-in ml-sm-2 ml-1">
+                                    <span class="label">Sifariş balansim</span>
+                                    <span class="numb">
+                                        0
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="19" viewBox="0 0 18 19" fill="none" data-inject-url="/assets/sprite/tl.svg" class="injectable">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M6.75048 19C6.41228 19 6.08358 18.8822 5.82518 18.658C5.50788 18.3882 5.32548 17.993 5.32548 17.575V12.3639L2.05459 13.6723C1.88169 13.7407 1.70119 13.7749 1.52449 13.7749C0.95829 13.7749 0.42439 13.4367 0.20209 12.8781C-0.0905101 12.1466 0.26479 11.3182 0.99629 11.0256L5.32548 9.29393V7.61394L2.05459 8.9223C1.88169 8.9926 1.70119 9.0249 1.52449 9.0249C0.95829 9.0249 0.42439 8.6867 0.20209 8.1281C-0.0905101 7.3985 0.26479 6.5682 0.99629 6.2756L5.32548 4.54393V1.425C5.32548 0.6384 5.96388 0 6.75048 0C7.53708 0 8.17548 0.6384 8.17548 1.425V3.40393L10.4963 2.4756C11.224 2.1849 12.0562 2.5383 12.3488 3.2698C12.6414 3.9994 12.2861 4.8297 11.5546 5.1223L8.17548 6.47394V8.15392L10.4963 7.2256C11.224 6.9349 12.0562 7.2883 12.3488 8.0198C12.6414 8.7494 12.2861 9.5797 11.5546 9.8723L8.17548 11.2239V15.7833C10.4707 15.1316 14.3505 13.5717 14.3505 10.45C14.3505 9.6634 14.9889 9.025 15.7755 9.025C16.5621 9.025 17.2005 9.6634 17.2005 10.45C17.2005 17.29 7.39078 18.9164 6.97278 18.9829C6.89868 18.9943 6.82458 19 6.75048 19Z" fill="#282141"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="info mr-sm-3 mr-0">
+                            <a asp-controller="User" asp-action="DollarBalance">
+                                <div class="icon-box ml-auto mr-auto mb-sm-0 mb-2">
+                                    <img class="cargo" src="~/assets/imgs/cargo-box.svg" alt="#">
+                                </div>
+                                <div class="balance-text-in ml-sm-2 ml-1">
+                                    <span class="label">Daşınma balansım</span>
+                                    <span class="numb">
+                                        0.00
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="9" viewBox="0 0 12 9" fill="none" data-inject-url="/assets/sprite/manat.svg" class="injectable manat">
+                                            <path d="M5.25 3.18393V8.2174C5.25 8.64964 5.58581 9 6 9C6.41419 9 6.75 8.64964 6.75 8.2174V3.19821C9.20161 3.64953 10.5 6.27429 10.5 8.21735C10.5 8.64959 10.8358 8.99995 11.25 8.99995C11.6642 8.99995 12 8.64959 12 8.21735C12 5.17703 9.92292 2.04196 6.75 1.61554V0.782604C6.75 0.350362 6.41419 0 6 0C5.58581 0 5.25 0.350362 5.25 0.782604V1.60683C1.94119 1.97568 0 4.9354 0 8.21735C0 8.64959 0.335812 8.99995 0.75 8.99995C1.16419 8.99995 1.5 8.64959 1.5 8.21735C1.5 6.58855 2.30634 3.61641 5.25 3.18393V3.18393Z" fill="#282141"></path>
+                                        </svg>
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-lg-3 col-xl-3 hide-mobile">
+                <div class="widget widget-one mt-3">
+                    <div class="widget-content">
+                        <div class="profile_sidebar_account">
+                            <div class="profile_sidebar_img">
+                                <img src="/assets/imgs/user_photo_blue.png" class="" alt="user-name">
+                            </div>
+                            <div class="profile-holder__sidebar__account__info">
+                                <h3 class="profile_sidebar_account_i">@Model.Name @Model.Surname</h3>
+                                <div class="profile_sidebar_account_i_id">
+                                    <span class="profile_sidebar_account_i_label m-r-8">
+                                        Müştəri kodu:
+                                    </span>
+                                    <span class="profile_sidebar_account_i_code">@Model.UserName</span>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="profile-nav">
+                            <li class="menu ">
+                                <a asp-controller="User" asp-action="Index" class="dropdown-toggle">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map">
+                                            <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                                            <line x1="8" y1="2" x2="8" y2="18"></line>
+                                            <line x1="16" y1="6" x2="16" y2="22"></line>
+                                        </svg>
+                                        <span>Türkiyə ünvanım</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu ">
+                                <a asp-controller="User" asp-action="Closures" class="dropdown-toggle">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-archive">
+                                            <polyline points="21 8 21 21 3 21 3 8"></polyline>
+                                            <rect x="1" y="3" width="22" height="5"></rect>
+                                            <line x1="10" y1="12" x2="14" y2="12"></line>
+                                        </svg>
+                                        <span>Bağlamalar</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu active">
+                                <a asp-controller="User" asp-action="Declaration" class="dropdown-toggle">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-clipboard">
+                                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                                        </svg>
+                                        <span>Bəyannamələr</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu ">
+                                <a href="https://jetkargo.az/profile/dasinma-haqqi" class="dropdown-toggle">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-credit-card">
+                                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                                            <line x1="1" y1="10" x2="23" y2="10"></line>
+                                        </svg>
+                                        <span>Daşınma haqqı ödənişi</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu ">
+                                <a href="https://jetkargo.az/profile/courier" class="dropdown-toggle">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-truck">
+                                            <rect x="1" y="3" width="15" height="13"></rect>
+                                            <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                                            <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                                            <circle cx="18.5" cy="18.5" r="2.5"></circle>
+                                        </svg>
+                                        <span>Kuryer sifarişi</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="menu ">
+                                <a href="https://jetkargo.az/profile/trendyol-sms" class="dropdown-toggle">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check-square"><polyline points="9 11 12 14 22 4"></polyline><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path></svg>
+                                        <span>Trendyol təsdiq kodu</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="menu ">
+                                <a href="https://jetkargo.az/profile/ismariclar" class="dropdown-toggle">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-send">
+                                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                        </svg>
+                                        <span>İsmarıclar (10)</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="menu ">
+                                <a asp-controller="User" asp-action="Profile" class="dropdown-toggle">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-settings">
+                                            <circle cx="12" cy="12" r="3"></circle>
+                                            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                                        </svg>
+                                        <span>Şəxsi məlumatlar</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                            <li class="menu">
+                                <a asp-controller="Account" asp-action="Logout" class="dropdown-toggle">
+                                    <div class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-log-out"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                        <span>Çıxış</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8 col-lg-9 col-xl-9 col-sm-12">
+                <div class="profile-content">
+                    <div class="row layout-top-spacing">
+                        <div class="col-lg-12 col-12 layout-spacing">
+                            <div class="statbox widget box box-shadow">
+                                <div class="widget-header">
+                                    <div class="row">
+                                        <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <h4>Bəyannamələr</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="widget-content widget-content-area widget-table-three">
+                                    <div class="table-responsive">
+                                        <table class="table table-scroll mb-4 myTable">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-left th-content">Smart ID / Tracking ID</th>
+                                                    <th class="text-center th-content">Mağaza</th>
+                                                    <th class="text-center th-content">Məhsul</th>
+                                                    <th class="text-center th-content">Status</th>
+                                                    <th class="text-center th-content">Malın dəyəri</th>
+                                                    <th class="text-center th-content">Invoys fayl</th>
+                                                    <th class="text-center th-content">Çəki (kg)</th>
+                                                    <th class="text-center th-content">Çatdırılma qiyməti</th>
+                                                    <th class="text-center th-content">Əməliyyat</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                                <tr>
+                                                    <td class="text-left border bold-border-top bold-border-bottom" style="position: relative;">
+                                                        <strong style="color: green">JET25884<br>733004011328334</strong>
+                                                    </td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">Trendyol</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">TSHIRT</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">Gözlənilir</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">88.99 ₺</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottoms">
+                                                        <div class="table__link">
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">0.160 (kg)</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">
+                                                        2.00<i class="fas fa-dollar-sign"></i> (3.40₼)
+                                                    </td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="text-left border bold-border-top bold-border-bottom" style="position: relative;">
+                                                        <strong style="color: green">JET25779<br>267189386420</strong>
+                                                    </td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">Trendyol</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">gömlek</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">Gözlənilir</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">229.00 ₺</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottoms">
+                                                        <div class="table__link">
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">0.306 (kg)</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">
+                                                        3.00<i class="fas fa-dollar-sign"></i> (5.10₼)
+                                                    </td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">
+                                                    </td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td class="text-left border bold-border-top bold-border-bottom" style="position: relative;">
+                                                        <strong style="color: green">JET25678<br>7330004011328426</strong>
+                                                    </td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">Trendyol</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">pantolon</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">Gözlənilir</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">129.99 ₺</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottoms">
+                                                        <div class="table__link">
+                                                        </div>
+                                                    </td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">0.312 (kg)</td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">
+                                                        3.00<i class="fas fa-dollar-sign"></i> (5.10₼)
+                                                    </td>
+                                                    <td class="text-center border bold-border-top bold-border-bottom">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,58 @@
+﻿@model Business.ViewModels.ResetPassViewModel
+@{
+    ViewData["Title"] = "ResetPass";
+}
+
+
+<!-- SECTIONS START -->
+<section id="intro">
+    <div class="container">
+        <div class="row">
+            <div class="faq-title d-flex justify-content-center">
+                <b>Dynamex-ə xoş gəlmişsiniz!</b>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 left">
+                <div class="title">
+                    <b>Şifrəni Yenilə</b>
+                </div>
+                <div class="form">
+                    <form method="post" class="form-group">
+                        <div class="email">
+
+                            <input type="hidden" asp-for="Email" />
+
+                            <input type="hidden" asp-for="Token" />
+                        </div>
+                        <div class="password">
+                            <label for="Password">Yeni Şifrə</label> <br>
+                            <input asp-for="NewPassword" type="password" id="Password"> <br>
+                            <span asp-validation-for="NewPassword" style="display: none;">Şifrə boş qoyula bilməz</span>
+                        </div>
+                        <div class="password">
+                            <label for="Password">Yeni Şifrə</label> <br>
+                            <input asp-for="ConfirmPassword" type="password" id="Password"> <br>
+                            <span asp-validation-for="ConfirmPassword" style="display: none;">Şifrə boş qoyula bilməz</span>
+                        </div>
+                        <button type="submit">Yenilə</button>
+                        </form>
+                </div>
+            </div>
+            <div class="col-lg-5 right">
+                <div class="login-image-wrap">
+                    <img src="~/assets/imgs/login/login.svg" alt="Login Image" class="login-image">
+                </div>
+                <div class="text">
+                    <span>Hesabınız yoxdur?</span>
+                    <a asp-controller="Account" asp-action="Register">Qeydiyyatdan keçin!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SECTIONS END -->

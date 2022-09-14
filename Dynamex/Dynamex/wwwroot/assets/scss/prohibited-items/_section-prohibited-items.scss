@@ -1,0 +1,50 @@
+#prohibited-items{
+    padding-left: 16.5rem;
+    padding-right: 16.5rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    .prohibited-items-title{
+        margin-bottom: 1rem;
+        b{
+            font-size: 35px;
+        }
+    }
+    .prohibited-items-description{
+        margin-bottom: 2rem;
+        p{
+            font-size: 14px;
+            color: #7b7b93;
+        }
+    }
+    .prohibited-items-country{
+        border-bottom: 1px solid #f8f8f8;
+        margin-bottom: 5rem;
+        .country-badge{
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+            padding: .5rem 2rem;
+            background-color: #fef5e9;
+            border-radius: 10px;
+            font-size: 15px;
+            margin-bottom: 2rem;
+            cursor: pointer;
+        }
+    }
+    .prohibited-items-list{
+        li{
+            list-style: none;
+            margin-bottom: 1rem;
+        }
+        li::before {
+            content: "⠀";
+            background: url('https://api.iconify.design/lucide/package.svg?color=gray') no-repeat center center / contain;
+            display: inline-block;
+            margin-right: 1rem;
+            width: 18px;
+        }
+    }
+    .note{
+        padding-left: 2rem;
+    }
+}

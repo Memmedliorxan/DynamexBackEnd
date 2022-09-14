@@ -1,0 +1,32 @@
+@media only screen and (max-width: 999px) {
+    .left{
+
+    }
+    .right{
+        display: none;
+    }
+}
+@media only screen and (max-width: 599px) {
+    #intro{
+        .faq-description{
+            margin-bottom: 1rem;
+        }
+        b{
+            font-size: 18px !important;
+        }
+        p{
+            font-size: 16px !important;
+        }
+    }
+    .left{
+        .title{
+            b{
+                font-size: 18px !important;
+            }
+        }
+        .form-group{
+            margin-top: 0 !important;
+            scale: 0.8 !important;
+        }
+    }
+}

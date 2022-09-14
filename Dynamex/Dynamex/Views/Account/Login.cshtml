@@ -1,0 +1,62 @@
+﻿@model Business.ViewModels.LoginViewModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+
+
+<!-- SECTIONS START -->
+<section id="intro">
+    <div class="container">
+        <div class="row">
+            <div class="faq-title d-flex justify-content-center">
+                <b>Dynamex-ə xoş gəlmişsiniz!</b>
+            </div>
+            <div class="faq-description d-flex justify-content-center">
+                <p>Heabınıza daxil olun!</p>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="login">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-12 left">
+                <div class="title">
+                    <b>Daxil ol</b>
+                </div>
+                <div class="form">
+                    <form method="post" class="form-group">
+                        <div class="email">
+                            <label for="Email">Email</label> <br>
+                            <input asp-for="Email" type="email" id="Email"> <br>
+                            <span class="error" style="display: none;">Email boş qoyula bilməz</span>
+                        </div>
+                        <div class="password">
+                            <label for="Password">Şifrə</label> <br>
+                            <input asp-for="Password" type="password" id="Password"> <br>
+                            <span class="error" style="display: none;">Şifrə boş qoyula bilməz</span>
+                        </div>
+                        <div class="remember">
+                            <input  type="checkbox" id="Remember">
+                            <label for="Remember">Məni xatırla</label>
+                        </div>
+                        <button type="submit">Daxil ol</button>
+                        <a asp-controller="Account" asp-action="ForgetPass" class="reset" style="cursor: pointer; font-size: 13px; font-weight: 500;">Şifrəni yenilə</a>
+                    </form>
+                </div>
+            </div>
+            <div class="col-lg-5 right">
+                <div class="login-image-wrap">
+                    <img src="~/assets/imgs/login/login.svg" alt="Login Image" class="login-image">
+                </div>
+                <div class="text">
+                    <span>Hesabınız yoxdur?</span>
+                    <a asp-controller="Account" asp-action="Register">Qeydiyyatdan keçin!</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SECTIONS END -->

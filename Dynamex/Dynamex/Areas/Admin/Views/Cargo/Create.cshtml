@@ -1,0 +1,59 @@
+﻿@using Core.Entities
+@model Business.ViewModels.CreateViewModels.CargoCreateViewModel
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="col-12 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">New Cargo</h4>
+            <form class="forms-sample" method="post">
+                <div class="form-group">
+                    <label for="exampleInputName1">Name</label>
+                    <input asp-for="Name" type="text" class="form-control" id="exampleInputName1" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail3">Track Id</label>
+                    <input asp-for="TrackId"  class="form-control" id="exampleInputEmail3" placeholder="Id">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword4">Weight</label>
+                    <input asp-for="Weight" type="text" class="form-control" id="exampleInputPassword4" placeholder="Kq">
+                </div>
+                <div class="form-group">
+                    <label for="exampleSelectGender">Category</label>
+                    <select asp-for="CargoCategory" class="form-control" id="exampleSelectGender">
+                        <option>Şalvar</option>
+                        <option>Köynək</option>
+                        <option>Ayaqqabı</option>
+                        <option>Papağ</option>
+                    </select>
+                </div> 
+                <div class="form-group">
+                    <label for="exampleSelectGender">User</label>
+                    <select asp-for="ApplicationUserId" class="form-control" id="exampleSelectGender">
+                        @foreach (var item in (List<ApplicationUser>)ViewBag.Users)
+                        {
+                            <option value="@item.Id">@item.PassportFIN - @item.Name @item.Surname</option>
+                        }
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputCity1">Shopping Name</label>
+                    <input asp-for="ShoppingName" type="text" class="form-control" id="exampleInputCity1" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputCity1">Cargo Price</label>
+                    <input asp-for="CargoPrice" type="text" class="form-control" id="exampleInputCity1" placeholder="Price">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputCity1">Delivery Price</label>
+                    <input asp-for="DeliveryPrice" type="text" class="form-control" id="exampleInputCity1" placeholder="Price">
+                </div>
+                <button type="submit" class="btn btn-primary me-2">Submit</button>
+                <button class="btn btn-light">Cancel</button>
+            </form>
+        </div>
+    </div>
+</div>

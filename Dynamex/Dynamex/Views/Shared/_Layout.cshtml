@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/imgs/main/favicon.png" type="image/x-icon">
+    <!-- BOOTSTRAP STYLESHEET CDN STARTS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- BOOTSTRAP STYLESHEET CDN ENDS -->
+    <!-- LOCAL STYLESHEETS START -->
+    <link rel="stylesheet" href="~/assets/css/shared.css">
+    <link rel="stylesheet" href="~/assets/css/about.css">
+    
+
+    <link rel="stylesheet" href="~/assets/css/master.min.css">
+    <link rel="stylesheet" href="~/assets/css/bootstrap.min.css">
+    
+
+    <link rel="stylesheet" href="~/assets/css/agreement.css">
+    <link rel="stylesheet" href="~/assets/css/contact.css">
+    <link rel="stylesheet" href="~/assets/css/faq.css">
+    <link rel="stylesheet" href="~/assets/css/index.css">
+    <link rel="stylesheet" href="~/assets/css/login.css">
+    <link rel="stylesheet" href="~/assets/css/news.css">
+    <link rel="stylesheet" href="~/assets/css/rates.css">
+    <link rel="stylesheet" href="~/assets/css/register.css">
+    <link rel="stylesheet" href="~/assets/css/services.css">
+    <link rel="stylesheet" href="~/assets/css/stores.css">
+    <link rel="stylesheet" href="~/assets/css/privacy-policy.css">
+    <link rel="stylesheet" href="~/assets/css/prohibited-items.css">
+    <!-- LOCAL STYLESHEETS END -->
+    <title>Türkiyədən və Amerikadan sifariş, çatdırılma xidməti</title>
+    <style>
+        ul.profile-nav li.menu.active > .dropdown-toggle {
+            background: #fd475d !important;
+        }
+        .profile_sidebar_img {
+            border: 4px solid #fd475d;
+        }
+    </style>
+</head>
+<noscript>
+    <style type="text/css">
+        body {
+            display: none;
+        }
+        
+    </style>
+</noscript>
+<body>
+    
+    <div id="preloader" class="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-icon">
+                <img src="~/assets/imgs/main/preloader.gif" alt="preloader" width="100%" height="100%" draggable="false">
+            </div>
+        </div>
+    </div>
+    <!-- HEADER STARTS -->
+    <header>
+        <div class="top-header py-2">
+            <div class="container">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="row align-items-center">
+                        <div class="nav justify-content-between">
+                            <div class="top-header-left-side d-flex gap-5 align-items-center">
+                                <a href="tel:*7171" class="d-flex gap-2">
+                                    <span class="iconify"
+                                          data-icon="healthicons:phone" data-height="16"
+                                          style="color: #7b7b93;"></span>*7171
+                                </a>
+                                <a asp-controller="ProhibitedItems" asp-action="Index">Daşınması qadağan olan məhsullar</a>
+                                <a asp-controller="FAQ" asp-action="Index">Tez-tez verilən suallar</a>
+                            </div>
+                            <div class="top-header-right-side d-flex gap-4 align-items-center">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <div style="padding-right: 5%">
+                                        <a style="display: flex" asp-controller="User" asp-action="Index">
+                                            <i style="padding-right: 5px">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
+                                                    <path id="prefix__account-outline" d="M10 4a3 3 0 1 1-3 3 3 3 0 0 1 3-3m0 1.5A1.5 1.5 0 1 0 11.5 7 1.5 1.5 0 0 0 10 5.5m0 5.25c2 0 6 1 6 3V16H4v-2.25c0-2 4-3 6-3m0 1.425c-2.227 0-4.575 1.1-4.575 1.575v.825h9.15v-.825c0-.48-2.348-1.575-4.575-1.575z" transform="translate(-4 -4)" style="fill:#7b7b93"></path>
+                                                </svg>
+                                            </i>
+                                            Hesabım
+                                        </a>
+                                    </div>
+
+
+
+                                    <div>
+
+                                        <a style="display: flex" asp-controller="Account" asp-action="Logout">
+                                            <i style="padding-right: 5px">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="10.8" height="12" viewBox="0 0 10.8 12">
+                                                    <path id="prefix__logout" d="M10.8 11V9.2H6.6V6.8h4.2V5l3 3-3 3M9.6 2a1.2 1.2 0 0 1 1.2 1.2v1.2H9.6V3.2H4.2v9.6h5.4v-1.2h1.2v1.2A1.2 1.2 0 0 1 9.6 14H4.2A1.2 1.2 0 0 1 3 12.8V3.2A1.2 1.2 0 0 1 4.2 2z" transform="translate(-3 -2)" style="fill:#7b7b93"></path>
+                                                </svg>
+                                            </i>
+                                            Çıxış
+                                        </a>
+                                    </div>
+
+                                }
+                                else
+                                {
+                                    <a asp-controller="Account" asp-action="Login" class="login">Daxil ol</a>
+                                    <a asp-controller="Account" asp-action="Register" class="registration">Qeydiyyat</a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-header py-4">
+            <div class="container py-1">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="row align-items-center">
+                        <div class="nav justify-content-between align-items-center">
+                            <div class="bottom-header-left-side pt-1">
+                                <a asp-controller="Home" asp-action="Index" class="logo">
+                                    <img src="~/assets/imgs/main/logo.svg" alt="Dynamex Logo" height="53" class="logo">
+                                </a>
+                            </div>
+                            <div class="bottom-header-menu">
+                                <nav>
+                                    <ul class="nav d-flex gap-5 align-items-center">
+                                        <li>
+                                            <a asp-controller="About" asp-action="Index" title="">
+                                                Haqqımızda
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="Services" asp-action="Index" title="">
+                                                Xidmətlər
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="Tarif" asp-action="Index" title="">
+                                                Tariflər
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="Stores" asp-action="Index" title="">
+                                                Mağazalar
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="News" asp-action="Index" title="">
+                                                Yeniliklər
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a asp-controller="Contact" asp-action="Index" title="">
+                                                Əlaqə
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- HEADER ENDS -->
+    <main>
+        @RenderBody()
+    </main>
+    <!-- FOOTER STARTS -->
+    <footer>
+        <div class="container footer">
+            <div class="row">
+                <div class="col-md-12 mt-5 mb-5">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12">
+                            <a href="./index.html" class="white-logo">
+                                <img class="mb-4" src="~/assets/imgs/main/logo-white.svg" alt="Dynamex Logo" width="160">
+                            </a>
+                            <p class="mb-5">
+                                <span class="iconify" data-icon="mdi:copyright"></span> 2022
+                                Dynamex.az<br>Bütün hüquqlar qorunur
+                            </p>
+                            <div class="socials">
+                                <a href="https://www.facebook.com/dynamex.az/" class="social" target="_blank">
+                                    <span class="iconify" data-icon="cib:facebook-f" data-height="20"
+                                          style="color: #7b7b93;"></span>
+                                </a>
+                                <a href="https://dynamex.az/about-us.html#" class="social" target="_blank">
+                                    <span class="iconify" data-icon="akar-icons:twitter-fill" data-height="20"
+                                          style="color: #7b7b93;"></span>
+                                </a>
+                                <a href="https://www.instagram.com/dynamic.express/?hl=en" class="social"
+                                   target="_blank">
+                                    <span class="iconify" data-icon="akar-icons:instagram-fill" data-height="20"
+                                          style="color: #7b7b93;"></span>
+                                </a>
+                                <a href="https://www.youtube.com/channel/UCnNG1fkf-8Wd3SKbS0Ioavg/featured"
+                                   class="social" target="_blank">
+                                    <i>
+                                        <span class="iconify" data-icon="akar-icons:youtube-fill" data-height="20"
+                                              style="color: #7b7b93;"></span>
+                                    </i>
+                                </a>
+                            </div>
+                            <div class="downloads">
+                                <h3 class="downloads-title">Mobil Tətbiqi Endir!</h3>
+                                <div class="d-flex flex-raw gap-3">
+                                    <a href='https://play.google.com/store/apps/details?id=az.dynamex.app'
+                                       target="_blank">
+                                        <img alt='Get it on Google Play' width="150"
+                                             src='/assets/imgs/main/google-play.png' />
+                                    </a>
+                                    <a href="https://apps.apple.com/ca/app/dynamex/id1559258269" target="_blank">
+                                        <img src="~/assets/imgs/main/app-store.png" width="135" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <h3>Menu</h3>
+                            <ul class="menu-list">
+                                <li><a href="./about.html">Haqqımızda</a></li>
+                                <li><a href="./services.html">Xidmətlər</a></li>
+                                <li><a href="./rates.html">Tariflər</a></li>
+                                <li><a href="./stores.html">Mağazalar</a></li>
+                                <li><a href="./news.html">Yeniliklər</a></li>
+                                <li><a href="./contact.html">Əlaqə</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                            <h3>Kömək</h3>
+                            <ul class="help-list">
+                                <li><a href="./faq.html">Tez-tez verilən suallar</a></li>
+                                <li><a href="#">Şərtlər</a></li>
+                                <li><a href="./privacy-policy.html">Gizlilik siyasəti</a></li>
+                                <li><a href="./agreement.html">İstifadəçi Razılaşması</a></li>
+                                <li><a href="./news.html">Yeniliklər</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-4 col-md-12">
+                            <h3>Əlaqə</h3>
+                            <ul class="contact-list">
+                                <li>
+                                    <a href="mailto:info@dynamex.az">Problemli şöbə ilə əlaqə: info@dynamex.az</a>
+                                </li>
+                                <li>
+                                    <a href="mailto:hr@dynamex.az">Əməkdaşlıq üçün : hr@dynamex.az</a>
+                                </li>
+                                <li>
+                                    <a href="tel:*7171" class="d-flex gap-2">
+                                        <span class="iconify" data-icon="healthicons:phone" data-height="16"
+                                              style="color: #7b7b93;"></span>
+                                        *7171
+                                    </a>
+                                </li>
+                            </ul>
+                            <h3 class="address-title">Ünvanlar</h3>
+                            <ul class="address-list">
+                                <li>
+                                    28 May, Dəmir yolu vağzalı 2-ci mərtəbə AZ 1020.
+                                </li>
+                                <li>
+                                    Gəncə ş, AZ 2013 Kəpəz r-nu, N.Nərimanov pr, 42C.
+                                </li>
+                                <li>
+                                    Sumqayıt ş, H.Əliyev pr, 493-503,14 mərtəbənin yanı.
+                                </li>
+                                <li>
+                                    Xalqlar Dostluğu, İsmayıl Məmmədov küçəsi 6, AZ1142.
+                                </li>
+                                <li>
+                                    Yasamal, A.M.Şərifzadə küç, Şəbəkə xidmət mərkəzi AZ1138.
+                                </li>
+                                <li>
+                                    Xırdalan ş. H.Əliyev pr. 11, Kristal Abşeron 2.
+                                </li>
+                                <li>
+                                    Əhmədli Ukrayna dairəsi, Gəncə pr, Vunq Tau küç 2.
+                                </li>
+                                <li>
+                                    Bakıxanov qəs, S.Qocayev küç, AZ1132-ın yanı.
+                                </li>
+                                <li>
+                                    Nəsimi r-nu, 3-cü mkr, Hüseynbala Əliyev küç.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER ENDS -->
+    <!-- BOOTSTRAP JAVASCRIPT CDN STARTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP JAVASCRIPT CDN ENDS -->
+    <!-- ICONIFY JAVASCRIPT CDN STARTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iconify/2.0.0/iconify.min.js"
+            integrity="sha512-lYMiwcB608+RcqJmP93CMe7b4i9G9QK1RbixsNu4PzMRJMsqr/bUrkXUuFzCNsRUo3IXNUr5hz98lINURv5CNA=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ICONIFY JAVASCRIPT CDN ENDS -->
+    <!-- JQUERY CDN STRATS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- JQUERY CDN ENDS -->
+    <!-- LOCAL JS STARTS -->
+    <script src="~/assets/js/shared.js"></script>
+    <script src="~/assets/js/index.js"></script>
+    <script src="~/assets/js/calculator.js"></script>
+    <script src="~/assets/js/rates.js"></script>
+    <!-- LOCAL JS ENDS -->
+    <!-- COUNTUP CDN STARTS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/1.9.3/countUp.js"
+            integrity="sha512-C/7jeRahXJbaKh+NVXBiX8Mw/9kiJxCP2uEzMTQPzqzylSfzgqWxJDYYW+IrrweOFov66E2mr8JAADL7oGOY1w=="
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <!-- COUNTUP CDN ENDS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+﻿@model Business.ViewModels.UpdateViewModels.AddressesUpdateViewModel
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="col-lg-12 col-12 layout-spacing" style="padding: 5%">
+    <div class="statbox widget box box-shadow">
+        <div class="widget-header">
+            <div class="row">
+                <div class="col-xl-12 col-md-12 col-sm-12 col-12">
+                    <h4>Türkiye ünvanım</h4>
+                </div>
+            </div>
+        </div>
+        <div class="widget-content widget-content-area">
+            <div class="clipboard">
+                <div class="row">
+                    <form method="post">
+                        <div class="col-md-6 form-group">
+                            <label for="input-nameCountry">Ülke</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="input-nameCountry" value="Turkiye" readonly="">
+                                <div class="input-group-append">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label for="input-addressTitle">Adres başlığı</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="input-addressTitle" asp-for="AddressTitleTR">
+                                <div class="input-group-append">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label for="input-city">İl-Şehir</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="input-city" asp-for="CityTR">
+                                <div class="input-group-append">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label for="input-ilche">İlçe</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="input-ilche" asp-for="CountryDistrictTR">
+                                <div class="input-group-append">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 form-group">
+                            <label for="input-Semt">Semt</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="input-Semt" asp-for="NeighborhoodTR">
+                                <div class="input-group-append">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-12 form-group">
+                            <label for="input-addressTurkey">Türkiyə ünvanım</label>
+                            <div class="input-group">
+                                <textarea type="text" class="form-control" id="input-addressTurkey" style="resize: none; height: 35px; line-height: 30px;" asp-for="AddressTR"></textarea>
+                                <div class="input-group-append">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 form-group">
+                            <label for="input-mobilePhone">Mobil telefon</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="input-mobilePhone" asp-for="PhoneNumberTR">
+                                <div class="input-group-append">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 form-group">
+                            <label for="input-zip">ZIP/Post kodu</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="input-zip" asp-for="PostalCodeTR">
+                                <div class="input-group-append">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 form-group">
+                            <label for="input-tckimlik">TC kimlik</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="input-tckimlik" asp-for="TrID">
+                                <div class="input-group-append">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <button class="btn btn-success" type="submit">Update</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,256 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+}
+
+<!-- SECTIONS START -->
+<section id="faq">
+    <div class="container">
+        <div class="row">
+            <div class="faq-title d-flex justify-content-center">
+                <b>Tez-tez verilən suallar</b>
+            </div>
+            <div class="faq-description d-flex justify-content-center">
+                <p>Sifariş zamanı sizi ən çox maraqlandıran sualları cavabladıq.</p>
+            </div>
+            <div class="faq">
+                <div class="question-box">
+                    <b class="num">1</b>
+                    <b class="question">Bizim üstünlüklərimiz</b>
+                    <i class="icon open" id="open">
+                        <span class="iconify" data-icon="ic:baseline-plus" style="color: #7b7b93;" data-height="32"></span>
+                    </i>
+                    <i class="icon close" id="close">
+                        <span class="iconify" data-icon="ic:baseline-minus" style="color: #7b7b93;" data-height="32"></span>
+                    </i>
+                </div>
+                <div class="answer-box closed" id="answer-box">
+                    <div class="answer">
+                        <p>Ödənişsiz geri qaytarılma xidməti.</p>
+                        <p>"Mənim üçün Sifariş Et" xidməti.</p>
+                        <p>Dynamex şirkəti bağlamaların poçt ilə Azərbaycanda istənilən ünvana çatdırılmasını həyata keçirir.</p>
+                        <p>Daşınılan bütün bağlamaların ödənişsiz olaraq sığortalanması.</p>
+                        <p>Türkiyədə qapıda ödəmə ("Kapıda ödəmə") xidməti.</p>
+                        <p>Onlayn kuryer xidməti.</p>
+                        <p>Minimal çatdırılma tarifləri $1-dan başlayan qiymətlər.</p>
+                        <p>Ofisin şəhər mərkəzində və əlverişli ünvanda yerləşməsi.</p>
+                        <p>Operativ müştəri xidmətləri.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="question-box">
+                    <b class="num">2</b>
+                    <b class="question">Necə işləyir?</b>
+                    <i class="icon open" id="open">
+                        <span class="iconify" data-icon="ic:baseline-plus" style="color: #7b7b93;" data-height="32"></span>
+                    </i>
+                    <i class="icon close" id="close">
+                        <span class="iconify" data-icon="ic:baseline-minus" style="color: #7b7b93;" data-height="32"></span>
+                    </i>
+                </div>
+                <div class="answer-box closed" id="answer-box">
+                    <div class="answer">
+                        <b>Dynamex.az - da qeydiyyatdan keçin</b>
+                        <p>Qeydiyyatdan keçməklə Türkiyədə xarici ünvana sahib olacaqsınız və hesabınızda ünvan qeyd olunacaq.</p>
+                        <b>Sifarişi ünvana göndərin</b>
+                        <p>Onlayn mağazalardan alış-veriş edərkən bağlamanızın çatdırılacağı ünvan hissəsinə saytımızda qeyd edilən ünvanı yazın və ödəniş edib sifarişinizi tamamlayın.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="question-box">
+                    <b class="num">3</b>
+                    <b class="question">Çatdırılma haqqı hansı üsulla hesablanır?</b>
+                    <i class="icon open" id="open">
+                        <span class="iconify" data-icon="ic:baseline-plus" style="color: #7b7b93;" data-height="32"></span>
+                    </i>
+                    <i class="icon close" id="close">
+                        <span class="iconify" data-icon="ic:baseline-minus" style="color: #7b7b93;" data-height="32"></span>
+                    </i>
+                </div>
+                <div class="answer-box closed" id="answer-box">
+                    <div class="answer">
+                        <p>
+                            Beynəlxalq Hava Nəqliyyatı Assosiasiyasının metrik standartlarına
+                            uyğun olaraq daşınan yüklərin çəkisi bağlamaların ölçülərindən
+                            asılı olaraq iki cür hesablana bilər:
+                        </p>
+                        <b style="display:block">1. Fiziki çəki</b>
+                        <b>2. Həcm çəkisi</b>
+                        <p>
+                            Hər iki göstərici hesablanır hansı daha çox olarsa,
+                            daşınma haqqı o çəki əsasında hesablanır. Nəzərinizə
+                            çatdırırıq ki, Türkiyədən geyim, 2 ədəd ayaqqabı və əl
+                            çantalarının daşınma haqqı yalnız fiziki çəkisi əsasında
+                            hesablanır. Ayaqqabı 2 ədəddən çox olarsa, daşınma haqqı həcm çəkisinə əsasən hesablanacaqdır.
+                        </p>
+                        <p>
+                            Hər hansı bir uzunluq gösətiricisi 60 sm və daha
+                            çox olan bağlamaların daşınma haqqı həm həcm çəkisi,
+                            həm də fiziki çəkisi hesablanacaq, hansı çəki göstəricisi
+                            daha çox olarsa, daşınma haqqı o çəki əsasında hesablanacaqdır.
+                        </p>
+                        <p>
+                            Hesablanma qaydasını nəzərinizə çatdırırq.
+                        </p>
+                        <b>En (sm) x Uzunluq (sm) x Hündürlük (sm)/6000 = Həcm çəkisi (kq)</b>
+                    </div>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="question-box">
+                    <b class="num">4</b>
+                    <b class="question">Sifarişim neçə gün ərzində çatdırılır?</b>
+                    <i class="icon open" id="open">
+                        <span class="iconify" data-icon="ic:baseline-plus" style="color: #7b7b93;" data-height="32"></span>
+                    </i>
+                    <i class="icon close" id="close">
+                        <span class="iconify" data-icon="ic:baseline-minus" style="color: #7b7b93;" data-height="32"></span>
+                    </i>
+                </div>
+                <div class="answer-box closed" id="answer-box">
+                    <div class="answer">
+                        <p>
+                            Bağlamaların çatdırılma müddəti məhsul xarici anbarımıza daxil olduğu vaxtdan hesablanır.
+                            Türkiyədən yüklərin göndərişi həftədə 7 gün, 24 saat ərzində həyata keçirilir.
+                            Amerikadan yüklərin göndərişi isə  həftədə 1 dəfə, 5-7 gün ərzində həyata keçirilir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="question-box">
+                    <b class="num">5</b>
+                    <b class="question">Sifarişim neçə gün ərzində çatdırılır?</b>
+                    <i class="icon open" id="open">
+                        <span class="iconify" data-icon="ic:baseline-plus" style="color: #7b7b93;" data-height="32"></span>
+                    </i>
+                    <i class="icon close" id="close">
+                        <span class="iconify" data-icon="ic:baseline-minus" style="color: #7b7b93;" data-height="32"></span>
+                    </i>
+                </div>
+                <div class="answer-box closed" id="answer-box">
+                    <div class="answer">
+                        <p>
+                            Gecikmələrin yaranmaması və bağlama hesabında əks olunması
+                            üçün müştəri şəxsi hesabına daxil olaraq, sifarişi haqqında
+                            məlumatı əvvəlcədən bəyan etməlidir. Bəyənnamə - müştərinin
+                            sifariş etdiyi bağlama haqqında yük xarici anbara daxil olmazdan
+                            <b>ƏVVƏL</b> Dynamex.az şəxsi hesabında  “BƏYAN  ET” bölməsində məlumat
+                            verməsidir. Sifariş haqqında məlumat bağlama xarici anbarlara
+                            ÇATDIRILMAMIŞDAN əvvəl qeyd olunmalıdır. Yükün bəyan edilməsi
+                            yalnız bağlama satıcı tərəfindən kuryerə verildikdən və izləmə
+                            nömrəsi (Tracking number,Gönderi numarası, Kargo takip numarası,
+                            Barkod no, MNG kargoda Fatura No) təqdim edildikdən sonra mümkündür.
+                            Bağlama “sipariş numarası” ilə bəyan oluna bilməz. Bəyənnamədə
+                            bağlamanın izləmə nömrəsi( izləmə nömrəsi bölməsinə bu nömrələrdən
+                            birini yazmaq olar: “Tracking number”, “Gönderi numarası”, Kargo
+                            takip numarası, Barkod no)  mağaza adı, məhsulun kategoriyası qeyd
+                            edilir və satıcı tərəfindən təqdim edilmiş invoys sənədi (fatura) əlavə edilir.
+                        </p>
+                        <b>
+                            İstisnalar:
+                        </b>
+                        <p>
+                            Nadir hallarda satıcılar müştərinin bağlamasını
+                            izləmə nömrəsi (tracking number) təyin etmədən
+                            göndərir. Bu halda yalnız bağlama anbara daxil
+                            olduqdan sonra bəyannamə doldurulmalıdır.
+                            Məlumatların düzgün qeyd edilməsi bağlamanın
+                            vaxtında çatdırılmasının ilkin şərtidir.
+                        </p>
+                        <b style="display: block;">
+                            Bağlamanın düzgün bəyan olunması qaydası
+                            ilə və bəyannamə ilə bağlı bütün suallarınıza
+                            video təlimatda cavab tapa bilərsiniz.
+                        </b>
+                        <a href="https://youtu.be/Grh5fu9mnw0">Düzgün Bəyanetmə Qaydası (Video)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="faq">
+                <div class="question-box">
+                    <b class="num">6</b>
+                    <b class="question">Ünvan və iş saatlarımız</b>
+                    <i class="icon open" id="open">
+                        <span class="iconify" data-icon="ic:baseline-plus" style="color: #7b7b93;" data-height="32"></span>
+                    </i>
+                    <i class="icon close" id="close">
+                        <span class="iconify" data-icon="ic:baseline-minus" style="color: #7b7b93;" data-height="32"></span>
+                    </i>
+                </div>
+                <div class="answer-box closed" id="answer-box">
+                    <div class="answer">
+                        <p>
+                            <b>Ünvan:</b>
+                            Bakı şəhəri. Nəsimi rayonu, Dilarə Əliyeva Küçəsi 235, 28 may m/s,Dəmir yolu vağzalı,2-ci mərtəbə AZ 1020
+                        </p>
+                        <p>
+                            <b>Ünvan:</b>
+                            Gəncə : Kəpəz r-nu, N.Nərimanov pr-ti 42C,Bank of Bakunun yanı
+                        </p>
+                        <p>
+                            <b>Ünvan:</b>
+                            Sumqayıt şəhəri. Heydər Əliyev prospekti 493-503, 14 mərtəbənin yanı.
+                        </p>
+                        <p>
+                            <b>Ünvan:</b>
+                            Yasamal,Abbas Mirzə Şərifzadə küç,Şəbəkə xidmət mərkəzi AZ1138
+                        </p>
+                        <p>
+                            <b>Ünvan:</b>
+                            Xalqlar Dostluğu,İsmayıl Məmmədov küçəsi 6,AZ1142
+                        </p>
+                        <p>
+                            <b>Ünvan:</b>
+                            Əhmədli,Ukrayna dairəsi, Gəncə pr, Vunq Tau küç 2
+                        </p>
+                        <p>
+                            <b>Ünvan:</b>
+                            Xırdalan,H.Əliyev pr 11,Kristal Abşeron 2
+                        </p>
+                        <p>
+                            <b>Ünvan:</b>
+                            Sabunçu r-nu, Bakıxanov qəs., S, Qocayev küç , AZ1132-ın yanı
+                        </p>
+                        <p>
+                            <b>İş saatları 28 May:</b>
+                            Hər gün 09:00-22:00
+                        </p>
+                        <p>
+                            <b>İş saatları Gəncə :</b>
+                            Hər gün 09:00-20:00
+                        </p>
+                        <p>
+                            <b>İş saatları Sumqayıt:</b>
+                            Hər gün 10:00-20:00
+                        </p>
+                        <p>
+                            <b>İş saatları Yasamal:</b>
+                            Həftə içi 09:00-19:30, Şənbə 09:00-18:00, Bazar 09:00-17:00
+                        </p>
+                        <p>
+                            <b>İş saatları Xalqlar:</b>
+                            Həftə içi 09:00-19:30, Şənbə Bazar 09:00-18:00
+                        </p>
+                        <p>
+                            <b>İş saatları Xırdalan:</b>
+                            Hər gün  10:00-21:00
+                        </p>
+                        <p>
+                            <b>İş saatları Əhmədli:</b>
+                            Hər gün 10:00-21:00
+                        </p>
+                        <p>
+                            <b>İş saatları Bakıxanov:</b>
+                            Hər gün 10:00-21:00-dək
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- SECTIONS END -->
